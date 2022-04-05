@@ -9,6 +9,7 @@ import PatientNavbar from './Components/PatientNavbar'
 import AdminNavbar from './Components/AdminNavbar';
 import SpecNavbar from './Components/SpecNavbar';
 import DoctorNavbar from './Components/DoctorNavbar';
+import AdminHome from './Components/AdminHome';
 import React from "react";
 import {
   BrowserRouter as Router,
@@ -50,6 +51,7 @@ function App() {
           </Route>
           <Route path="/adminDash">
             <AdminNavbar/>
+            <AdminHome/>
           </Route>
           <Route path="/">
             <Navbar/>

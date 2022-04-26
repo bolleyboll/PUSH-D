@@ -22,44 +22,43 @@ import Home from './Components/Home';
 function App() {
   return (
     <>
-    <Router>
-    <Switch>
+      <Router>
+        <Switch>
           <Route path="/contact">
-            <Navbar/>
-            <Contact/>
+            <Navbar />
+            <Contact />
           </Route>
           <Route path="/aboutUs">
-            <Navbar/>
-            <AboutUs/>
+            <Navbar />
+            <AboutUs />
           </Route>
           <Route path="/join">
-            <Navbar/>
-            <Join/>
+            <Navbar />
+            <Join />
           </Route>
           <Route path="/login">
-            <Navbar/>
-            <Login/>
+            <Navbar />
+            <Login />
           </Route>
           <Route path="/patDash">
-          <AdminNavbar/>
-            <PatientNavbar/>
+            <PatientNavbar />
           </Route>
           <Route path="/docDash">
-            <DoctorNavbar/>
+            <DoctorNavbar />
           </Route>
           <Route path="/spDash">
-            <SpecNavbar/>
+            <SpecNavbar />
           </Route>
           <Route path="/adminDash">
-            <AdminNavbar/>
-            <AdminHome/>
+            <AdminNavbar />
+            <AdminHome />
           </Route>
           <Route path="/">
-            <Navbar/>
-            <Home>{document.body.style.backgroundColor='#E5F2FA'}</Home>
+            <Navbar />
+            <Home>{document.body.style.backgroundColor = '#E5F2FA'}</Home>
           </Route>
         </Switch>
-    </Router>
+      </Router>
     </>
   );
 }

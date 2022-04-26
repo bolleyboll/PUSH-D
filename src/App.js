@@ -41,6 +41,7 @@ function App() {
             <Login/>
           </Route>
           <Route path="/patDash">
+          <AdminNavbar/>
             <PatientNavbar/>
           </Route>
           <Route path="/docDash">

@@ -12,55 +12,55 @@ import DoctorNavbar from './Components/DoctorNavbar';
 import AdminHome from './Components/AdminHome';
 import React from "react";
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
+	BrowserRouter as Router,
+	Switch,
+	Route,
+	Link
 } from "react-router-dom";
 import Home from './Components/Home';
 
 function App() {
-  return (
-    <>
-      <Router>
-        <Switch>
-          <Route path="/contact">
-            <Navbar />
-            <Contact />
-          </Route>
-          <Route path="/aboutUs">
-            <Navbar />
-            <AboutUs />
-          </Route>
-          <Route path="/join">
-            <Navbar />
-            <Join />
-          </Route>
-          <Route path="/login">
-            <Navbar />
-            <Login />
-          </Route>
-          <Route path="/patDash">
-            <PatientNavbar />
-          </Route>
-          <Route path="/docDash">
-            <DoctorNavbar />
-          </Route>
-          <Route path="/spDash">
-            <SpecNavbar />
-          </Route>
-          <Route path="/adminDash">
-            <AdminNavbar />
-            <AdminHome />
-          </Route>
-          <Route path="/">
-            <Navbar />
-            <Home>{document.body.style.backgroundColor = '#E5F2FA'}</Home>
-          </Route>
-        </Switch>
-      </Router>
-    </>
-  );
+	return (
+		<>
+			<Router>
+				<Switch>
+					<Route path="/contact">
+						<Navbar />
+						<Contact />
+					</Route>
+					<Route path="/aboutUs">
+						<Navbar />
+						<AboutUs />
+					</Route>
+					<Route path="/join">
+						<Navbar />
+						<Join />
+					</Route>
+					<Route path="/login">
+						<Navbar />
+						<Login />
+					</Route>
+					<Route path="/patDash">
+						<PatientNavbar />
+					</Route>
+					<Route path="/docDash">
+						<DoctorNavbar />
+					</Route>
+					<Route path="/spDash">
+						<SpecNavbar />
+					</Route>
+					<Route path="/adminDash">
+						<AdminNavbar />
+						<AdminHome />
+					</Route>
+					<Route path="/">
+						<Navbar />
+						<Home>{document.body.style.backgroundColor = '#E5F2FA'}</Home>
+					</Route>
+				</Switch>
+			</Router>
+		</>
+	);
 }
 
 export default App;

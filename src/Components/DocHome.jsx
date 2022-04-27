@@ -24,9 +24,25 @@ export default function DocHome() {
         let th1 = document.createElement("th");
         th1.textContent = "Email ID";
         tr.appendChild(th1);
-
         thead.appendChild(tr);
         table.appendChild(thead);
+
+        let tbody = document.createElement("tbody");
+        for (let i = 0; i < list_pat.length; i++) {
+          let tr = document.createElement("tr");
+          let td = document.createElement("td");
+          let td1 = document.createElement("td");
+
+          td.textContent = list_pat[i].name;
+          td1.textContent = list_pat[i].email;
+
+          tr.appendChild(td);
+          tr.appendChild(td1);
+
+          tbody.appendChild(tr);
+        }
+
+        table.appendChild(tbody);
         console.log(table);
       });
   };

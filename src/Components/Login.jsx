@@ -73,7 +73,6 @@ export default function Login() {
             type="text"
             placeholder="Enter Username"
             className="form-control shadow rounded"
-            id="exampleInputEmail1"
             aria-describedby="emailHelp"
           />
           <div id="emailHelp" className="form-text">
@@ -90,7 +89,6 @@ export default function Login() {
             type="password"
             className="form-control shadow rounded"
             placeholder="Enter Password"
-            id="exampleInputPassword1"
           />
         </div>
         <div className="mx-5">

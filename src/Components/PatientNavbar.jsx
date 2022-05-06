@@ -29,34 +29,50 @@ export default function PatientNavbar() {
           >
             <ul className="navbar-nav">
               <li className="nav-item">
-                <Link className="nav-link active" to="/adminDash">
-                  <button
-                    type="button"
-                    className="btn btn-primary shadow"
-                    style={{
-                      borderRadius: "12px",
-                      backgroundColor: "#00ADEF",
-                      borderColor: "#00ADEF",
-                    }}
-                  >
-                    HOME
-                  </button>
+                <Link className="nav-link active shadow" to="/patDash" style={{borderRadius:"12px",color:'white',backgroundColor:"#00ADEF"}}>
+                    HOME   
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active" to="/">
+                <Link className="nav-link active shadow mx-5" to="/patAbout" style={{borderRadius:"12px",color:'white',backgroundColor:"#00ADEF"}}>
+                    ABOUT
+                  </Link>
+              </li>
+              <li className="nav-item">
+                <div className="dropdown">
                   <button
+                    class="btn btn-primary shadow dropdown-toggle"
                     type="button"
-                    className="btn btn-primary shadow"
+                    data-bs-toggle="dropdown"
                     style={{
                       borderRadius: "12px",
                       backgroundColor: "#00ADEF",
                       borderColor: "#00ADEF",
                     }}
                   >
-                    LOGOUT
+                    PATIENT'S ID
                   </button>
-                </Link>
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton1"
+                  >
+                    <li>
+                      <Link class="dropdown-item" to="/patChangePass">
+                        Change Password
+                      </Link>
+                    </li>
+                    <li>
+                      <Link class="dropdown-item" to="/patEditProfile">
+                        Edit Profile
+                      </Link>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="/">
+                        Logout
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </li>
             </ul>
           </div>

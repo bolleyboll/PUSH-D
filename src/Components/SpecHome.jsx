@@ -1,5 +1,5 @@
 import React from "react";
-import { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from "styled-components";
 import ChatBot from "react-simple-chatbot";
 
 const steps = [
@@ -46,14 +46,14 @@ const steps = [
 ];
 
 const theme = {
-  background: '#C9FF8F',
-  headerBgColor: '#197B22',
-  headerFontSize: '20px',
-  botBubbleColor: '#0F3789',
-  headerFontColor: 'white',
-  botFontColor: 'white',
-  userBubbleColor: '#FF5733',
-  userFontColor: 'white',
+  background: "#C9FF8F",
+  headerBgColor: "#197B22",
+  headerFontSize: "20px",
+  botBubbleColor: "#0F3789",
+  headerFontColor: "white",
+  botFontColor: "white",
+  userBubbleColor: "#FF5733",
+  userFontColor: "white",
 };
 
 const config = {
@@ -64,102 +64,135 @@ const config = {
 export default function specHome() {
   return (
     <>
-      <div className="container">
-        <table
-          className="table table-hover rounded shadow float-start my-5"
-          style={{ width: "100%" }}
-        >
-          <thead>
-            <tr>
-              <th scope="col">Patient ID</th>
-              <th scope="col">First Name</th>
-              <th scope="col">Last Name</th>
-              <th scope="col">Message</th>
-              <th scope="col">Options</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">224</th>
-              <td>Aman</td>
-              <td>Gupta</td>
-              <td>Please change the doctor.</td>
-              <td>
-                <button type="button" className="btn btn-primary">
-                  Change Doctor
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">224</th>
-              <td>Aman</td>
-              <td>Gupta</td>
-              <td>Please change the doctor.</td>
-              <td>
-                <button type="button" className="btn btn-primary">
-                  Change Doctor
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">224</th>
-              <td>Aman</td>
-              <td>Gupta</td>
-              <td>Please change the doctor.</td>
-              <td>
-                <button type="button" className="btn btn-primary">
-                  Change Doctor
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">224</th>
-              <td>Aman</td>
-              <td>Gupta</td>
-              <td>Please change the doctor.</td>
-              <td>
-                <button type="button" className="btn btn-primary">
-                  Change Doctor
-                </button>
-              </td>
-            </tr>      <tr>
-              <th scope="row">224</th>
-              <td>Aman</td>
-              <td>Gupta</td>
-              <td>Please change the doctor.</td>
-              <td>
-                <button type="button" className="btn btn-primary">
-                  Change Doctor
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">224</th>
-              <td>Aman</td>
-              <td>Gupta</td>
-              <td>Please change the doctor.</td>
-              <td>
-                <button type="button" className="btn btn-primary">
-                  Change Doctor
-                </button>
-              </td>
-            </tr>
-
-          </tbody>
-        </table>
+      <div className="row">
+        <div className="container">
+          <table className="table table-hover rounded shadow float-start my-5 table-bordered"
+            style={{ width: "100%"}}>
+            <thead>
+              <tr>
+                <th scope="col">S No.</th>
+                <th scope="col">Doctor's Name</th>
+                <th scope="col">Message</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+              
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colSpan="2">Larry the Bird</td>
+                
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div className="row">
+        <div className="container">
+          <table
+            className="table table-hover rounded shadow float-start my-5 table-bordered"
+            style={{ width: "100%"}}
+          >
+            <thead>
+              <tr>
+                <th scope="col">Patient ID</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Message</th>
+                <th scope="col">Options</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">224</th>
+                <td>Aman</td>
+                <td>Gupta</td>
+                <td>Please change the doctor.</td>
+                <td>
+                  <button type="button" className="btn btn-primary">
+                    Change Doctor
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">224</th>
+                <td>Aman</td>
+                <td>Gupta</td>
+                <td>Please change the doctor.</td>
+                <td>
+                  <button type="button" className="btn btn-primary">
+                    Change Doctor
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">224</th>
+                <td>Aman</td>
+                <td>Gupta</td>
+                <td>Please change the doctor.</td>
+                <td>
+                  <button type="button" className="btn btn-primary">
+                    Change Doctor
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">224</th>
+                <td>Aman</td>
+                <td>Gupta</td>
+                <td>Please change the doctor.</td>
+                <td>
+                  <button type="button" className="btn btn-primary">
+                    Change Doctor
+                  </button>
+                </td>
+              </tr>{" "}
+              <tr>
+                <th scope="row">224</th>
+                <td>Aman</td>
+                <td>Gupta</td>
+                <td>Please change the doctor.</td>
+                <td>
+                  <button type="button" className="btn btn-primary">
+                    Change Doctor
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">224</th>
+                <td>Aman</td>
+                <td>Gupta</td>
+                <td>Please change the doctor.</td>
+                <td>
+                  <button type="button" className="btn btn-primary">
+                    Change Doctor
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
       <div className="container chat">
-      <ThemeProvider theme={theme}>
-                <ChatBot
- 
-                    // This appears as the header
-                    // text for the chat bot
-                    headerTitle="GeekBot"
-                    steps={steps}
-                    {...config}
- 
-                />
-            </ThemeProvider>
+        <ThemeProvider theme={theme}>
+          <ChatBot
+            // This appears as the header
+            // text for the chat bot
+            headerTitle="GeekBot"
+            steps={steps}
+            {...config}
+          />
+        </ThemeProvider>
       </div>
     </>
   );

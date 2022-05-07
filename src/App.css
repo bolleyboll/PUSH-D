@@ -32,6 +32,43 @@
   font-size: 1.5em;
 }
 
+.img-home {
+  width: 100%;
+  height: 15vw;
+  object-fit: cover;
+}
+
+.tt_1{
+  background-color: #ffced2;
+}
+.tt_2{
+  background-color: #ef8243;
+}
+.tt_3{
+  background-color: #58c3c3;
+}
+
+.ctitle{
+  font-family: 'Times New Roman', Times, serif;
+  color: #000;
+}
+.ctext{
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.videohead{
+  text-align: center;
+  font-size: 36px;
+  color: #003479;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.y_video{
+  margin-top: 30px;
+  margin-bottom: 100px;
+  background-image: ("../public/homepage.jpg");
+}
+
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

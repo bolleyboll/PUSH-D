@@ -10,7 +10,6 @@ import SpecHome from "./Components/SpecHome";
 import DoctorNavbar from "./Components/DoctorNavbar";
 import AdminHome from "./Components/AdminHome";
 import DoctorHome from "./Components/DocHome";
-import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./Components/Home";
 import PatientHome from "./Components/PatientHome";
@@ -23,9 +22,34 @@ import Section4 from "./Components/Section4";
 import Section5 from "./Components/Section5";
 import PatientDetails from "./Components/PatientDetails";
 import PatientSections from "./Components/PatientSections";
+import React from "react";
+import { useTranslation } from "react-i18next";
+import cookies from 'js-cookie'
+
+const languages = [
+  {
+    code: "esp",
+    name: "Español",
+    country_code: "esp",
+  },
+  {
+    code: "en",
+    name: "English",
+    country_code: "gb",
+  },
+  {
+    code: "ind",
+    name: "Hindi",
+    country_code: "ind",
+  },
+];
+
 
 function App() {
+  const { t } = useTranslation();
   return (
+    // <h1>{t("home.intro")}</h1>
+
     <>
       <Router>
         <Switch>
@@ -49,27 +73,27 @@ function App() {
           <Route path="/patSec1">
             <PatientNavbar />
             <PatientHome />
-            <Section1/>
+            <Section1 />
           </Route>
           <Route path="/patSec2">
             <PatientNavbar />
             <PatientHome />
-            <Section2/>
+            <Section2 />
           </Route>
           <Route path="/patSec3">
             <PatientNavbar />
             <PatientHome />
-            <Section3/>
+            <Section3 />
           </Route>
           <Route path="/patSec4">
             <PatientNavbar />
             <PatientHome />
-            <Section4/>
+            <Section4 />
           </Route>
           <Route path="/patSec5">
             <PatientNavbar />
             <PatientHome />
-            <Section5/>
+            <Section5 />
           </Route>
           <Route path="/patAbout">
             <PatientNavbar />
@@ -77,13 +101,13 @@ function App() {
           </Route>
           <Route path="/patChangePass">
             <PatientNavbar />
-            <PatientDetails/>
-            <PatientChangePass/>
+            <PatientDetails />
+            <PatientChangePass />
           </Route>
           <Route path="/patEditProfile">
             <PatientNavbar />
-            <PatientDetails/>
-            <PatientEditProfile/>
+            <PatientDetails />
+            <PatientEditProfile />
           </Route>
           <Route path="/docDash">
             <DoctorNavbar />
@@ -99,7 +123,7 @@ function App() {
           </Route>
           <Route path="/">
             <Navbar />
-            <Home/>
+            <Home />
           </Route>
         </Switch>
       </Router>

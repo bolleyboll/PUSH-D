@@ -1,3 +1,4 @@
+import { t } from "i18next";
 import React from "react";
 
 export default function Home() {
@@ -96,26 +97,20 @@ export default function Home() {
 
       <div className="container y_video">
         <blockquote>
-          <h2 className="videohead">Active Minds</h2>
+          <h2 className="videohead">{t("home.intro")}</h2>
           <center>
           <iframe 
             width="80%"
             height="600"
             src="https://www.youtube.com/embed/49mfPFTZsHs"
             title="YouTube video player"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
+            allowFullScreen
             style={{margin:"40px"}}
           ></iframe>
           </center>
-          <p className="videohead">
-            We know from a mental health survey that 74% of high school students
-            report having experienced stress or anxiety as a result of COVID-19.
-            So, we wanted to reach out to them directly to learn more. We invite
-            you to watch this short video.Then share their message far and wide:
-            Break the Stigma.
-          </p>
+          <p className="videohead">{t("home.text")}</p>
         </blockquote>
       </div>
 

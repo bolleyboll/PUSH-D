@@ -29,25 +29,6 @@ export default function Navbar() {
           >
             <ul className="navbar-nav">
               <li className="nav-item">
-                <Link
-                  className="nav-link active "
-                  aria-current="page"
-                  to="/contact"
-                >
-                  <button
-                    type="button"
-                    className="btn btn-primary shadow"
-                    style={{
-                      borderRadius: "12px",
-                      backgroundColor: "#00ADEF",
-                      borderColor: "#00ADEF",
-                    }}
-                  >
-                    CONTACT
-                  </button>
-                </Link>
-              </li>
-              <li className="nav-item">
                 <Link className="nav-link active" to="/aboutUs">
                   <button
                     type="button"

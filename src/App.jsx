@@ -1,12 +1,12 @@
 import "./App.css";
 import Navbar from "./Components/Navbar";
-import Contact from "./Components/Contact";
 import Join from "./Components/Join";
 import Login from "./Components/Login";
 import AboutUs from "./Components/AboutUs";
 import PatientNavbar from "./Components/PatientNavbar";
 import AdminNavbar from "./Components/AdminNavbar";
 import SpecNavbar from "./Components/SpecNavbar";
+import SpecHome from "./Components/SpecHome";
 import DoctorNavbar from "./Components/DoctorNavbar";
 import AdminHome from "./Components/AdminHome";
 import DoctorHome from "./Components/DocHome";
@@ -29,10 +29,6 @@ function App() {
     <>
       <Router>
         <Switch>
-          <Route path="/contact">
-            <Navbar />
-            <Contact />
-          </Route>
           <Route path="/aboutUs">
             <Navbar />
             <AboutUs />
@@ -89,16 +85,13 @@ function App() {
             <PatientDetails/>
             <PatientEditProfile/>
           </Route>
-          
-          
-          
-          
           <Route path="/docDash">
             <DoctorNavbar />
             <DoctorHome />
           </Route>
           <Route path="/spDash">
             <SpecNavbar />
+            <SpecHome />
           </Route>
           <Route path="/adminDash">
             <AdminNavbar />

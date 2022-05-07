@@ -68,6 +68,12 @@
   background-image: ("../public/homepage.jpg");
 }
 
+.chat{
+  position: "absolute";
+  margin-bottom: 0%;
+  margin-right: 0%;
+}
+
 
 .App-header {
   background-color: #282c34;

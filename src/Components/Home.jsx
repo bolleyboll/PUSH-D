@@ -94,43 +94,9 @@ export default function Home() {
         </button>
       </div> */}
 
-      {/* <section
-        className="stats"
-        style="background-image: url(https://www.activeminds.org/wp-content/uploads/2020/09/send_silence_packing_homepage.jpg)"
-      >
-        <div className="stats-container">
-          <div className="stat animated rollIn" data-animation="rollIn">
-            <div>
-              <h2 className="small">
-                <strong>67%</strong> <span>of young adults</span>
-              </h2>
-              <p>
-                tell a friend they are struggling before telling anyone else
-              </p>
-            </div>
-          </div>
-          <div className="stat animated slideInUp" data-animation="slideInUp">
-            <div>
-              <h2 className="small">
-                <strong>1.8</strong> <span>million</span>
-              </h2>
-              <p>people reached directly last year</p>
-            </div>
-          </div>
-          <div className="stat animated rollIn" data-animation="rollIn">
-            <div>
-              <h2 className="small">
-                <strong>50%</strong> <span>of us</span>
-              </h2>
-              <p>will experience a mental health condition in our lifetime</p>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
       <div className="container y_video">
         <blockquote>
-          <h2 className="videohead">Young Adult Mental Health</h2>
+          <h2 className="videohead">Active Minds</h2>
           <center>
           <iframe 
             width="80%"

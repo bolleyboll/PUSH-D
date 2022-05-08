@@ -99,25 +99,23 @@ export default function Home() {
         <blockquote>
           <h2 className="videohead">{t("home.intro")}</h2>
           <center>
-          <iframe 
-            width="80%"
-            height="600"
-            src="https://www.youtube.com/embed/49mfPFTZsHs"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            style={{margin:"40px"}}
-          ></iframe>
+            <iframe
+              width="80%"
+              height="600"
+              src="https://www.youtube.com/embed/49mfPFTZsHs"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              style={{ margin: "40px", borderRadius: "15px" }}
+            ></iframe>
           </center>
           <p className="videohead">{t("home.text")}</p>
         </blockquote>
       </div>
 
       <div className="row my-5">
-        <h2 className="display-5 text-center">
-          {t("card_head")}
-        </h2>
+        <h2 className="display-5 text-center">{t("card_head")}</h2>
       </div>
       <div className="row my-5">
         <div className="col"></div>
@@ -129,12 +127,8 @@ export default function Home() {
               alt="Card image cap"
             />
             <div className="card-body">
-              <h5 className="card-title text-center ctitle">
-                {t("card_1")}
-              </h5>
-              <p className="card-text ctext">
-              {t("card_1_text")}
-              </p>
+              <h5 className="card-title text-center ctitle">{t("card_1")}</h5>
+              <p className="card-text ctext">{t("card_1_text")}</p>
             </div>
           </div>
         </div>
@@ -146,12 +140,8 @@ export default function Home() {
               alt="Card image cap"
             />
             <div className="card-body">
-              <h5 className="card-title text-center ctitle">
-              {t("card_2")}
-              </h5>
-              <p className="card-text ctext">
-              {t("card_2_text")}
-              </p>
+              <h5 className="card-title text-center ctitle">{t("card_2")}</h5>
+              <p className="card-text ctext">{t("card_2_text")}</p>
             </div>
           </div>
         </div>
@@ -163,19 +153,15 @@ export default function Home() {
               alt="Card image cap"
             />
             <div className="card-body">
-              <h5 className="card-title text-center ctitle">
-              {t("card_3")}
-              </h5>
-              <p className="card-text ctext">
-              {t("card_3_text")}
-              </p>
+              <h5 className="card-title text-center ctitle">{t("card_3")}</h5>
+              <p className="card-text ctext">{t("card_3_text")}</p>
             </div>
           </div>
         </div>
         <div className="col"></div>
         <div />
 
-        <div className="row my-5">
+        <div className="row my-5 modal-body">
           <div className="col mx-5 sm-8">
             <div className="card">
               <h3 className="card-header text-white bg-primary mb-3">
@@ -210,8 +196,8 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="col-sm-4 mx-3">
-            <div style={{ textAlign: "center" }} className="my-5">
+          <div className="col-sm-4 mx-3 container-fluid">
+            <div className="my-5">
               <video
                 autoPlay
                 loop
@@ -223,6 +209,27 @@ export default function Home() {
                 Your browser does not support the video tag.
               </video>
             </div>
+            <blockquote
+              style={{
+                borderLeft: "10px solid #ccc",
+                margin: ".5em 10px",
+                padding: "10px 20px",
+              }}
+            >
+              Depression can make you feel isolated. It can be helpful to meet
+              with other people who understand what it's like.
+              <br />
+              Take the time to recognise and think about your feelings, as they
+              might help you to understand the source of what is making you feel
+              depressed. Depression is often linked to events in the past, and
+              sometimes there can be no explanation at all. Either way, becoming
+              aware of these things is part of coping with depression.
+              <br />
+              <br />
+              Once you have a better understanding of why you feel depressed,
+              you can take steps towards rectifying the issue and improving your
+              overall wellbeing.
+            </blockquote>
           </div>
         </div>
       </div>

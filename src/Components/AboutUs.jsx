@@ -100,7 +100,7 @@ export default function AboutUs() {
           <div className="col">
             <div className="card cardAbout" style={{ width: "25rem" }}>
               <img
-                src="Srikant_Sir.jpg"
+                src="SuchiLaad.jpeg"
                 className="card-img-top myyimg"
                 alt="..."
               />

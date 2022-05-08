@@ -60,27 +60,31 @@ export default function Login() {
       />
       <form
         onSubmit={handleForm}
-        className="rounded float-end my-4 mx-5 animate__animated animate__fadeInUp shadow p-3 mb-5 rounded"
-        style={{ backgroundColor: "#89C7E7" }}
+        className="rounded float-end my-4 mx-5 animate__animated animate__fadeInUp shadow p-3 mb-5 rounded my-5"
+        style={{ backgroundColor: "#89C7E7", width: "25%", height: "70%" }}
       >
         <div className="mx-5">
-          <label htmlFor="exampleInputEmail1" className="form-label"></label>
+          <label htmlFor="exampleInputEmail1" className="form-label mx-2 my-2">
+            Enter your Username
+          </label>
           <input
             id="username"
             onChange={(e) => {
               setLoginData({ ...loginData, username: e.target.value });
             }}
             type="text"
-            placeholder="Enter Username"
+            placeholder="Your Username"
             className="form-control shadow rounded"
             aria-describedby="emailHelp"
           />
-          <div id="emailHelp" className="form-text">
-            We'll never share your email with anyone else.
-          </div>
         </div>
         <div className="mx-5">
-          <label htmlFor="exampleInputPassword1" className="form-label"></label>
+          <label
+            htmlFor="exampleInputPassword1"
+            className="form-label my-2 mx-2"
+          >
+            Enter your Password
+          </label>
           <input
             id="password"
             onChange={(e) => {
@@ -88,11 +92,16 @@ export default function Login() {
             }}
             type="password"
             className="form-control shadow rounded"
-            placeholder="Enter Password"
+            placeholder="Your Password"
           />
         </div>
         <div className="mx-5">
-          <label htmlFor="exampleInputPassword1" className="form-label"></label>
+          <label
+            htmlFor="exampleInputPassword1"
+            className="form-label my-2 mx-2"
+          >
+            Select a Role
+          </label>
           <select
             id="role"
             onChange={(e) => {
@@ -101,8 +110,12 @@ export default function Login() {
             className="form-control shadow rounded"
             aria-label="Default select example"
           >
-            <option defaultValue="Select role">Select role</option>
-            <option value="patient">Patient</option>
+            <option defaultValue="Select role" disabled>
+              Select role
+            </option>
+            <option value="patient" selected>
+              Patient
+            </option>
             <option value="doctor">Doctor</option>
             <option value="spec">Specialist</option>
             <option value="admin">Admin</option>

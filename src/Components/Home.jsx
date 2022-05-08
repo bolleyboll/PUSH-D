@@ -216,19 +216,12 @@ export default function Home() {
                 padding: "10px 20px",
               }}
             >
-              Depression can make you feel isolated. It can be helpful to meet
-              with other people who understand what it's like.
+              {t("r_1")}
               <br />
-              Take the time to recognise and think about your feelings, as they
-              might help you to understand the source of what is making you feel
-              depressed. Depression is often linked to events in the past, and
-              sometimes there can be no explanation at all. Either way, becoming
-              aware of these things is part of coping with depression.
+              {t("r_2")}
               <br />
               <br />
-              Once you have a better understanding of why you feel depressed,
-              you can take steps towards rectifying the issue and improving your
-              overall wellbeing.
+              {t("r_3")}
             </blockquote>
           </div>
         </div>

@@ -44,7 +44,7 @@ export default function AboutUs() {
           <div className="col">
             <div className="card cardAbout" style={{ width: "25rem" }}>
               <img
-                src="Srikant_Sir.jpg"
+                src="kunal_2.jpeg"
                 className="card-img-top myyimg"
                 alt="..."
               />
@@ -100,12 +100,12 @@ export default function AboutUs() {
           <div className="col">
             <div className="card cardAbout" style={{ width: "25rem" }}>
               <img
-                src="SuchiLaad.jpeg"
+                src="vishal.jpeg"
                 className="card-img-top myyimg"
                 alt="..."
               />
               <div className="card-body">
-                <h5 className="card-title">Suchi Laad</h5>
+                <h5 className="card-title">Vishal Govil</h5>
                 <p className="card-text">
                   <i>
                     M.Tech in Computer Science <br /> International Institute of
@@ -118,12 +118,12 @@ export default function AboutUs() {
           <div className="col">
             <div className="card cardAbout" style={{ width: "25rem" }}>
               <img
-                src="Srikant_Sir.jpg"
+                src="SuchiLaad.jpeg"
                 className="card-img-top myyimg"
                 alt="..."
               />
               <div className="card-body">
-                <h5 className="card-title">Vishal Govil</h5>
+                <h5 className="card-title">Suchi Laad</h5>
                 <p className="card-text">
                   <i>
                     M.Tech in Computer Science <br /> International Institute of

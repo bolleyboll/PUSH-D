@@ -116,7 +116,7 @@ export default function Home() {
 
       <div className="row my-5">
         <h2 className="display-5 text-center">
-          How does Active Minds help you?
+          {t("card_head")}
         </h2>
       </div>
       <div className="row my-5">
@@ -130,12 +130,10 @@ export default function Home() {
             />
             <div className="card-body">
               <h5 className="card-title text-center ctitle">
-                We don’t just educate you—we empower you.
+                {t("card_1")}
               </h5>
               <p className="card-text ctext">
-                We offer the guidance and encouragement you need to find hope,
-                get motivated, take charge of your mental health, and start
-                feeling better
+              {t("card_1_text")}
               </p>
             </div>
           </div>
@@ -149,11 +147,10 @@ export default function Home() {
             />
             <div className="card-body">
               <h5 className="card-title text-center ctitle">
-                We highlight what you need to know to help yourself.
+              {t("card_2")}
               </h5>
               <p className="card-text ctext">
-                We focus on what you need to know to understand the challenges
-                you face, make informed decisions, and take positive steps.
+              {t("card_2_text")}
               </p>
             </div>
           </div>
@@ -167,12 +164,10 @@ export default function Home() {
             />
             <div className="card-body">
               <h5 className="card-title text-center ctitle">
-                Our website is 100% ad-free and not for profit.
+              {t("card_3")}
               </h5>
               <p className="card-text ctext">
-                We don’t accept advertising, sell anything, or answer to
-                corporate sponsors. The result: a better online experience and
-                integrity you can trust.
+              {t("card_3_text")}
               </p>
             </div>
           </div>

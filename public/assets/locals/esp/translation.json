@@ -1,4 +1,14 @@
 {
     "home.intro": "Active Minds",
-    "home.text": "Sabemos por una encuesta de salud mental que el 74% de los estudiantes de secundaria informan haber experimentado estrés o ansiedad como resultado de COVID-19. Por lo tanto, queríamos comunicarnos con ellos directamente para obtener más información. Te invitamos a ver este breve video. Luego, comparte su mensaje por todas partes: Rompe el estigma."
+    "home.text": "Sabemos por una encuesta de salud mental que el 74% de los estudiantes de secundaria informan haber experimentado estrés o ansiedad como resultado de COVID-19. Por lo tanto, queríamos comunicarnos con ellos directamente para obtener más información. Te invitamos a ver este breve video. Luego, comparte su mensaje por todas partes: Rompe el estigma.",
+    "card_head":"¿Cómo te ayuda Active Minds?",
+    "card_1":"No solo lo educamos, lo empoderamos.",
+    "card_1_text":"Ofrecemos la orientación y el aliento que necesita para encontrar esperanza, motivarse, hacerse cargo de su salud mental y comenzar a sentirse mejor.",
+    "card_2":"Destacamos lo que necesita saber para ayudarse a sí mismo.",
+    "card_2_text":"Nos enfocamos en lo que necesita saber para comprender los desafíos que enfrenta, tomar decisiones informadas y dar pasos positivos.",
+    "card_3":"Nuestro sitio web es 100% libre de publicidad y sin fines de lucro.",
+    "card_3_text":"No aceptamos publicidad, vendemos nada ni respondemos a patrocinadores corporativos. El resultado: una mejor experiencia en línea e integridad en la que puede confiar.",
+    "about_us":"Sobre nosotros",
+    "join": "Entrar",
+    "login": "Acceso"
 }

@@ -1,4 +1,15 @@
 {
     "home.intro": "Active Minds",
-    "home.text": "We know from a mental health survey that 74% of high school students report having experienced stress or anxiety as a result of COVID-19. So, we wanted to reach out to them directly to learn more. We invite you to watch this short video.Then share their message far and wide: Break the Stigma."
+    "home.text": "We know from a mental health survey that 74% of high school students report having experienced stress or anxiety as a result of COVID-19. So, we wanted to reach out to them directly to learn more. We invite you to watch this short video.Then share their message far and wide: Break the Stigma.",
+    "card_head":"How does Active Minds help you?",
+    "card_1":"We don’t just educate you—we empower you.",
+    "card_1_text":" We offer the guidance and encouragement you need to find hope,get motivated, take charge of your mental health, and start feeling better",
+    "card_2":"We highlight what you need to know to help yourself.",
+    "card_2_text":"We focus on what you need to know to understand the challenges you face, make informed decisions, and take positive steps.",
+    "card_3":"Our website is 100% ad-free and not for profit.",
+    "card_3_text":"We don’t accept advertising, sell anything, or answer to corporate sponsors. The result: a better online experience and integrity you can trust.",
+    "about_us":"About Us",
+    "join": "Join",
+    "login": "Login"
+    
 }

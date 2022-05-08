@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import i18next from 'i18next'
+import { t } from "i18next";
 
 const languages = [
   {
@@ -100,7 +101,7 @@ export default function Navbar() {
                       borderColor: "#00ADEF",
                     }}
                   >
-                    ABOUT US
+                    {t("about_us")}
                   </button>
                 </Link>
               </li>
@@ -115,7 +116,7 @@ export default function Navbar() {
                       borderColor: "#00ADEF",
                     }}
                   >
-                    JOIN
+                    {t("join")}
                   </button>
                 </Link>
               </li>
@@ -130,7 +131,7 @@ export default function Navbar() {
                       borderColor: "#00ADEF",
                     }}
                   >
-                    LOGIN
+                    {t("login")}
                   </button>
                 </Link>
               </li>

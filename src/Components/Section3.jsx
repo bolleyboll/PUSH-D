@@ -43,7 +43,7 @@ const Section3 = () => {
           <ToastContainer />
           <h1 className="text-center my-3">Section-3</h1>
           <Form onSubmit={handleForm}>
-            <FormGroup className="mx-5 my-5">
+            <FormGroup className="mx-5 my-5" >
               <label htmlFor="ques1" className="form-label mx-2 my-3 fw-bold">
                 Over a causal meeting at the canteen, your manager mentions to
                 you and your team mates that the company is facing a tough time
@@ -64,7 +64,7 @@ const Section3 = () => {
                 onClick={(e) => {
                   setCourse({ ...course, q1: e.target.id });
                 }}
-                required
+                required={true}
               ></Input>
               Labeling
               <br />
@@ -75,6 +75,7 @@ const Section3 = () => {
                 onClick={(e) => {
                   setCourse({ ...course, q1: e.target.id });
                 }}
+                required={true}
               ></Input>
               Disqualifying the positive
               <br />
@@ -85,6 +86,7 @@ const Section3 = () => {
                 onClick={(e) => {
                   setCourse({ ...course, q1: e.target.id });
                 }}
+                required={true}
               ></Input>
               Jumping to conclusion
               <br />
@@ -95,6 +97,7 @@ const Section3 = () => {
                 onClick={(e) => {
                   setCourse({ ...course, q1: e.target.id });
                 }}
+                required={true}
               ></Input>
               Personalization
               <br />
@@ -121,6 +124,7 @@ const Section3 = () => {
                 onClick={(e) => {
                   setCourse({ ...course, q2: e.target.id });
                 }}
+                required={true}
               ></Input>
               Emotional reasoning
               <br />
@@ -131,6 +135,7 @@ const Section3 = () => {
                 onClick={(e) => {
                   setCourse({ ...course, q2: e.target.id });
                 }}
+                required={true}
               ></Input>
               Disqualifying the positive
               <br />
@@ -141,6 +146,7 @@ const Section3 = () => {
                 onClick={(e) => {
                   setCourse({ ...course, q2: e.target.id });
                 }}
+                required={true}
               ></Input>
               Jumping to conclusion
               <br />
@@ -151,6 +157,7 @@ const Section3 = () => {
                 onClick={(e) => {
                   setCourse({ ...course, q2: e.target.id });
                 }}
+                required={true}
               ></Input>
               Personalization
               <br />
@@ -177,6 +184,7 @@ const Section3 = () => {
                 onClick={(e) => {
                   setCourse({ ...course, q3: e.target.id });
                 }}
+                required={true}
               ></Input>
               Jumping to conclusions (fortune teller error)
               <br />
@@ -187,6 +195,7 @@ const Section3 = () => {
                 onClick={(e) => {
                   setCourse({ ...course, q3: e.target.id });
                 }}
+                required={true}
               ></Input>
               All or none thinking
               <br />
@@ -197,6 +206,7 @@ const Section3 = () => {
                 onClick={(e) => {
                   setCourse({ ...course, q3: e.target.id });
                 }}
+                required={true}
               ></Input>
               Shoulds and musts
               <br />
@@ -207,6 +217,7 @@ const Section3 = () => {
                 onClick={(e) => {
                   setCourse({ ...course, q3: e.target.id });
                 }}
+                required={true}
               ></Input>
               Magnification
               <br />
@@ -233,6 +244,7 @@ const Section3 = () => {
                 onClick={(e) => {
                   setCourse({ ...course, q4: e.target.id });
                 }}
+                required={true}
               ></Input>
               All or none thinking
               <br />
@@ -243,6 +255,7 @@ const Section3 = () => {
                 onClick={(e) => {
                   setCourse({ ...course, q4: e.target.id });
                 }}
+                required={true}
               ></Input>
               Mislabeling
               <br />
@@ -253,6 +266,7 @@ const Section3 = () => {
                 onClick={(e) => {
                   setCourse({ ...course, q4: e.target.id });
                 }}
+                required={true}
               ></Input>
               Overgeneralization
               <br />
@@ -263,6 +277,7 @@ const Section3 = () => {
                 onClick={(e) => {
                   setCourse({ ...course, q4: e.target.id });
                 }}
+                required={true}
               ></Input>
               Fortune telling
               <br />

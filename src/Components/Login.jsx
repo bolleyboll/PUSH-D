@@ -20,13 +20,11 @@ export default function Login() {
     postDataToServer(loginData);
     e.preventDefault();
   };
-  const [err, setErr] = useState("");
   const postDataToServer = (data) => {
     axios.post(`${base_url}/${data.role}/signin`, data).then(
       (response) => {
         sessionStorage.setItem("userName", response.data);
         if (response.data === "Username or Password don't match!") {
-          setErr("Invalid Id/Password");
           showAlert("Invalid Id/Password", "Success");
         } else if (data.role === "patient") {
           {

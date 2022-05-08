@@ -21,6 +21,7 @@ export default function Login() {
     e.preventDefault();
   };
   const postDataToServer = (data) => {
+    sessionStorage.setItem("username",data.username)
     axios.post(`${base_url}/${data.role}/signin`, data).then(
       (response) => {
         sessionStorage.setItem("userName", response.data);

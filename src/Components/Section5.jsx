@@ -15,5 +15,5 @@ export default function Section5() {
       This is section 5.
       <Link to="/patDash"><button onClick={disable}>Completed Section 5</button></Link>
     </div>
-  )
+  );
 }

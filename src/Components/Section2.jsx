@@ -14,5 +14,5 @@ export default function Section2() {
       This is section 2.
       <Link to="/patSec3"><button onClick={disable}>Completed Section 2</button></Link>
     </div>
-  )
+  );
 }

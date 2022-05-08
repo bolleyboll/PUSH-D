@@ -60,7 +60,7 @@ export default function Navbar() {
             id="navbarNav"
           >
             <ul className="navbar-nav">
-              <li className="nav-item">
+              <li className="nav-item my-2 mx-2">
                 <div className="dropdown">
                   <button
                     class="btn btn-primary shadow dropdown-toggle"

@@ -179,70 +179,33 @@ export default function Home() {
           <div className="col mx-5 sm-8">
             <div className="card">
               <h3 className="card-header text-white bg-primary mb-3">
-                About Active Minds
+              {t("h_11")}
               </h3>
               <div className="card-body">
-                <h5 className="card-title">What is Active Minds</h5>
+                <h5 className="card-title">{t("h_1")}</h5>
                 <p className="card-text">
-                  PUSH-D (Practice and Use Self-Help for Depression) is a
-                  computer-based self-care program which is meant to empower
-                  individuals by offering a space to learn, strengthen and
-                  practice psychological skills that can be useful in dealing
-                  with depressive symptoms.
+                {t("p_1")}
                   <br />
-                  This program is NOT meant for diagnosis of depression and is
-                  not a substitute for professional services provided by a
-                  mental health professional.
+                  {t("p_2")}
                 </p>
+                <hr />
+                
 
-                <h5 className="card-title">Why was Active Minds developed</h5>
+                <h5 className="card-title">{t("h_2")}</h5>
                 <p className="card-text">
-                  Depression is a common mental health concern which affects a
-                  large proportion of individuals at any given point of time.
-                  Depression can impact our functioning and quality of life even
-                  when the symptoms are mild in severity or too minimal to label
-                  it as clinical depression or a disorder.
-                  <br />
-                  Depression is a condition for which effective intervention
-                  methods are available. However, many individuals suffering
-                  from depression do not have sufficient information and
-                  resources to deal with it effectively or to reach out for
-                  professional help.
-                  <br />
-                  The World Health Organization(WHO) recommends that a variety
-                  of services and approaches, including self-care approaches
-                  need to be developed in all countries to support the unmet
-                  needs of individuals with common mental health concerns.{" "}
-                  <br />
-                  Self-help/self-care is the first level of mental health care
-                  which is likely to benefit a large number of individuals
-                  dealing with common mental health concerns, while a smaller
-                  number of individuals require additional help such as face-to
-                  face consultations with mental health professionals and
-                  intensive treatment. Self-care is similar to first aid. An
-                  individual can use it by himself/herself to hasten recovery.
-                  <br />
-                  PUSH-D program has been developed for individuals who are
-                  experiencing low severity/mild levels of depression. It is
-                  meant to help such individuals to help themselves to deal with
-                  depression and enhance their functioning and
-                  well-being.However, this program is NOT meant for diagnosis of
-                  depression and is NOT a substitute for help provided by a
-                  mental health professional.
-                  <br />
-                  It is based on same psychotherapeutic or psychological
-                  approaches that have been applied in the management of
-                  depression in face-face therapy interactions. The techniques
-                  incorporated in this program are based on principles of
-                  Cognitive Behaviour Therapy (CBT), Interpersonal Therapy(IPT),
-                  Supportive Therapy as well as Positive Psychology. Majority of
-                  the techniques used in this program are an integral part of
-                  interventions for depression that are based on available
-                  research evidence.
-                  <br />A unique feature of this self-care program is that it
-                  adds a touch of professional contact through periodic mobile
-                  prompts and emails to help keep up your motivation to complete
-                  the program.
+                {t("p_3")}
+                  <br /><br />
+                  {t("p_4")}
+                  <br /><br />
+                  {t("p_5")}
+                  <br /><br />
+                  {t("p_6")}
+                  <br /><br />
+                  {t("p_7")}
+                  <br /><br />
+                  {t("p_8")}
+                  <br /><br />
+                  {t("p_9")}
                 </p>
               </div>
             </div>

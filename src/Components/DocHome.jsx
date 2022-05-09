@@ -36,12 +36,13 @@ class DocHome extends React.Component {
     const restrictSection = (username) => {
       console.log(username)
       console.log(document.getElementById(`section${username}`).value)
+      var sec=document.getElementById(`section${username}`).value
       axios
-        .put(`${base_url}/restrictsection/${username}`, {
-          sec: document.getElementById(`section${username}`.value),
+        .put(`${base_url}/doctor/restrictsection/${username}/${sec}`, {
         })
         .then((response) => {
-          window.open("/docHome", "_self");
+          console.log("success!")
+          window.open("/docDash","_self")
         });
     };
     const sectionOrder = (username) => {
@@ -59,9 +60,9 @@ class DocHome extends React.Component {
       console.log(username);
       console.log(str2);
       axios
-        .put(`${base_url}/doctor/sectionorder/${username}`, { sectionOrder: str2 })
+        .put(`${base_url}/doctor/sectionorder/${username}`, {  sectionOrder: str2 })
         .then((response) => {
-          window.open("/docHome", "_self");
+          window.open("/docDash", "_self");
         });
     };
     return (
@@ -323,7 +324,7 @@ class DocHome extends React.Component {
               required
             >
               <option defaultValue="Select role">
-                Select doctor
+                Select specialist
               </option>
               {this.state.specialists.map((specialist) => (
               <option value={specialist.username}>{specialist.username}</option>

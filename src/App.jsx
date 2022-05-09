@@ -29,6 +29,7 @@ import TryCode from "./Components/TryCode";
 import ManageSpec from "./Components/ManageSpec";
 import ManageDoctor from "./Components/ManageDoctor";
 import ManagePat from "./Components/ManagePat";
+import DoctorEdit from "./Components/DoctorEdit";
 
 const languages = [
   {

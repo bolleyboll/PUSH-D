@@ -18,17 +18,16 @@ export default function PatientHome() {
         <div className="fs-5 text-center">It's Nice To Meet You</div>
         <br />
         <br />
-        <Link
+        {/* <Link
           className="btn btn-primary btn-xl text-uppercase"
-          href="#services"
           style={{ position: "absolute", left: "35%" }}
-          to="/patSec1"
+          to={sessionStorage.getItem("sec1")}
           onClick={() =>
             (document.getElementById("pat-cont-div").hidden = true)
           }
         >
           Start Sections
-        </Link>
+        </Link> */}
       </div>
     </>
   );

@@ -145,9 +145,9 @@ export default function PatientNavbar() {
                       </Link>
                     </li>
                     <li>
-                      <a className="dropdown-item" href="/">
+                      <Link className="dropdown-item" to="/">
                         Logout
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </div>

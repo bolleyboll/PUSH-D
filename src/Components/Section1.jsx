@@ -18,11 +18,7 @@ import { Link } from "react-router-dom";
 
 const Section1 = () => {
   const disable = () => {
-    document.getElementById("section1").disabled = false;
-    document.getElementById("section2").disabled = false;
-    document.getElementById("section3").disabled = true;
-    document.getElementById("section4").disabled = true;
-    document.getElementById("section5").disabled = true;
+    document.getElementById(sessionStorage.getItem("nOfSec1")).disabled = false;
   };
 
   useEffect(() => {
@@ -321,9 +317,8 @@ const Section1 = () => {
                     <br />
                     <br />
                   </FormGroup>
-
                   <Container className="text-center">
-                    <Link to="/patSec2">
+                    <Link to={sessionStorage.getItem("nextOfSec1")}>
                       <Button
                         type="submit"
                         color="success"

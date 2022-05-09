@@ -17,12 +17,7 @@ import "./Section_style.css";
 import { Link } from "react-router-dom";
 const Section2 = () => {
   const disable = () => {
-    document.getElementById("section1").disabled = false;
-    document.getElementById("section2").disabled = false;
-    document.getElementById("section3").disabled = false;
-    document.getElementById("section4").disabled = true;
-    document.getElementById("section5").disabled = true;
-  };
+    document.getElementById(sessionStorage.getItem("nOfSec2")).disabled = false;};
   useEffect(() => {
     document.title = "Active Minds";
   }, []);
@@ -321,7 +316,7 @@ const Section2 = () => {
                   </FormGroup>
 
                   <Container className="text-center">
-                    <Link to="/patSec3">
+                    <Link to={sessionStorage.getItem("nextOfSec2")}>
                       <Button
                         type="submit"
                         color="success"

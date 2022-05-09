@@ -44,12 +44,7 @@ const Section3 = () => {
     );
   };
   const disable = () => {
-    document.getElementById("section1").disabled = false;
-    document.getElementById("section2").disabled = false;
-    document.getElementById("section3").disabled = false;
-    document.getElementById("section4").disabled = false;
-    document.getElementById("section5").disabled = true;
-  };
+    document.getElementById(sessionStorage.getItem("nOfSec3")).disabled = false;};
 
   return (
     <Container>
@@ -335,7 +330,7 @@ const Section3 = () => {
                   </FormGroup>
 
                   <Container className="text-center">
-                    <Link to="/patSec4">
+                    <Link to={sessionStorage.getItem("nextOfSec3")}>
                       <Button
                         type="submit"
                         onClick={disable}

@@ -124,7 +124,11 @@ export default function Join() {
             <input
               type="password"
               onChange={(e) => {
-                setLoginData({ ...loginData, confirmPassword: e.target.value });
+                setLoginData({ 
+                    ...loginData, 
+                    confirmPassword: e.target.value, 
+                    adminID: value1 
+                });
               }}
               className="form-control shadow rounded"
               placeholder="Re-enter password"

@@ -161,7 +161,11 @@ export default function Join() {
             <input
               type="email"
               onChange={(e) => {
-                setLoginData({ ...loginData, email: e.target.value });
+                setLoginData({ 
+                    ...loginData, 
+                    email: e.target.value, 
+                    specID: value1
+                    });
               }}
               className="form-control shadow rounded"
               placeholder="alex@gmail.com"

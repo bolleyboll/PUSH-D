@@ -30,6 +30,7 @@ import ManageSpec from "./Components/ManageSpec";
 import ManageDoctor from "./Components/ManageDoctor";
 import ManagePat from "./Components/ManagePat";
 import DoctorEdit from "./Components/DoctorEdit";
+import PatientChat from "./Components/PatientChat";
 
 const languages = [
   {
@@ -87,6 +88,11 @@ window.onpopstate = function () {
             <ManagePat />
           </Route>
 
+          <Route path="/patChat">
+            <PatientNavbar />
+            <PatientDetails />
+            <PatientChat/>
+          </Route>
           <Route path="/patDash">
             <PatientNavbar />
             <PatientHome />

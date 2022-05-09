@@ -121,6 +121,19 @@ export default function PatientNavbar() {
                 </Link>
               </li>
               <li className="nav-item mt-2">
+                <Link
+                  className="nav-link active shadow mx-5"
+                  to="/patChat"
+                  style={{
+                    borderRadius: "12px",
+                    color: "white",
+                    backgroundColor: "#00ADEF",
+                  }}
+                >
+                  Chat
+                </Link>
+              </li>
+              <li className="nav-item mt-2">
                 <div className="dropdown">
                   <button
                     className="btn btn-primary shadow dropdown-toggle"

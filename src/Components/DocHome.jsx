@@ -11,7 +11,8 @@ class DocHome extends React.Component {
     super(props);
     this.state = {
       patients: [],
-      specialists:[]
+      specialists:[],
+      chats:[]
     };
   }
 
@@ -22,13 +23,23 @@ class DocHome extends React.Component {
     UserService.getAllSpecialists().then((response) => {
       this.setState({ specialists: response.data });
     });
+    UserService.getChats().then((response) => {
+      console.log(response.data);
+      this.setState({ chats: response.data });
+    });
     
   }
 
   render() {
-    const sendMessage = (username) => {
+    const sendMessageS = (username) => {
       console.log({senderId:username,receiverId:document.getElementById("doctorId").value,message:document.getElementById("msg").value});
       axios.post(`${base_url}/chat/save`,{id:Math.floor(Math.random() * 1000),senderId:username,receiverId:document.getElementById("doctorId").value,message:document.getElementById("msg").value}).then((response) => {
+        console.log("message sent")  
+      });
+    };
+    const sendMessage = (username) => {
+      console.log({senderId:username,receiverId:document.getElementById("dId").value,message:document.getElementById("ms").value});
+      axios.post(`${base_url}/chat/save`,{id:Math.floor(Math.random() * 1000),senderId:username,receiverId:document.getElementById("dId").value,message:document.getElementById("ms").value}).then((response) => {
         console.log("message sent")  
       });
     };
@@ -310,6 +321,37 @@ class DocHome extends React.Component {
             </div>
           </div>
         </div>
+        <div className="container my-5 text-center">
+          <div className="col-md-12">
+            <div className="panel panel-default">
+              <div className="panel-heading">Chat Details</div>
+              <div className="panel-body">
+                <table className="table table-condensed">
+                  <thead>
+                    <tr>
+                      <th>Sender Id</th>
+                      <th>Message</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    {this.state.chats.map((chat) => (
+                      <>
+                        <tr className="accordion-toggle">
+                          <td>{chat.senderId}</td>
+                          <td>{chat.message}</td>
+                        </tr>
+                      </>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div className="row">
+          <div className="col">
         <form className="shadow text-center my-5" style={{marginLeft:"30%",marginRight:"30%"}}>
         <div className="mx-5">
             <label
@@ -346,10 +388,54 @@ class DocHome extends React.Component {
             />
           </div>
           
+          <button type="button" className="btn btn-primary my-3" onClick={()=>{sendMessageS(sessionStorage.getItem("username"))}}>
+            Submit
+          </button>
+        </form>
+        </div>
+        <div className="col">
+        <form className="shadow text-center my-5" style={{marginLeft:"30%",marginRight:"30%"}}>
+        <div className="mx-5">
+            <label
+              htmlFor="exampleInputPassword1"
+              className="form-label mx-2 my-3 fw-bold"
+            >
+            </label>
+            <select
+              id="dId"
+              className="form-control shadow rounded"
+              aria-label="Default select example"
+              required
+            >
+              <option defaultValue="Select role">
+                Select patient
+              </option>
+              {this.state.patients.map((patient) => (
+              <option value={patient.username}>{patient.username}</option>
+              ))}
+            </select>
+          </div>
+          <div className="mx-5">
+          <label
+              htmlFor="exampleInputPassword1"
+              className="form-label mx-2 my-3 fw-bold"
+            >
+            </label>
+            
+            <textarea
+              type="text"
+              className="form-control shadow rounded"
+              id="ms"
+              placeholder="Enter your message"
+            />
+          </div>
+          
           <button type="button" className="btn btn-primary my-3" onClick={()=>{sendMessage(sessionStorage.getItem("username"))}}>
             Submit
           </button>
         </form>
+        </div>
+        </div>
       </>
     );
   }

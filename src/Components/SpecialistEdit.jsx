@@ -45,7 +45,7 @@ export default function Join() {
   };
   const [err, setErr] = useState("");
   const postDataToServer = (data) => {
-    axios.post(`${base_url}/specialist/register`, data).then(
+    axios.put(`${base_url}/specialist/update`, data).then(
       (response) => {
         console.log(response.data);
         if(response.data==="USER ALREADY EXISTS"){
@@ -76,7 +76,7 @@ export default function Join() {
           className="rounded my-4 mx-5 pt-2 shadow"
           style={{ backgroundColor: "#89C7E7" }}
         >
-          <h3 className="pt-5 fs-1 text-center">New Specialist Registration</h3>
+          <h3 className="pt-5 fs-1 text-center">Edit Specialist</h3>
           <div className="mx-5">
             <label
               htmlFor="exampleInputEmail1"

@@ -45,20 +45,22 @@ export default function Join() {
   };
   const [err, setErr] = useState("");
   const postDataToServer = (data) => {
-    axios.post(`${base_url}/specialist/register`, data).then(
+    axios.put(`${base_url}/doctor/update`, data).then(
       (response) => {
         console.log(response.data);
-        if(response.data==="USER ALREADY EXISTS"){
+        if (response.data === "USER ALREADY EXISTS") {
           console.log("Error!!!!!");
           setAlert(null);
           setAlert1(null);
           showAlert2("Error !", "Success");
-        }else{
-        console.log("success!");
-        setAlert(null);
-        setAlert2(null);
-        showAlert1("Successfully Registered you can now login!", "Success");
-      }},
+        } else {
+          console.log("success!");
+          setAlert(null);
+          setAlert2(null);
+          showAlert1("Successfully Registered you can now login!", "Success");
+        }
+        window.location.reload(false);
+      },
       (error) => {
         console.log(error);
         console.log("error!");
@@ -76,13 +78,13 @@ export default function Join() {
           className="rounded my-4 mx-5 pt-2 shadow"
           style={{ backgroundColor: "#89C7E7" }}
         >
-          <h3 className="pt-5 fs-1 text-center">New Specialist Registration</h3>
+          <h3 className="pt-5 fs-1 text-center">Edit Doctor</h3>
           <div className="mx-5">
             <label
               htmlFor="exampleInputEmail1"
               className="form-label mx-2 my-3 fw-bold"
             >
-              Enter Specialist's Username
+              Enter Doctor's Username
             </label>
             <input
               onChange={(e) => {
@@ -137,7 +139,7 @@ export default function Join() {
               htmlFor="exampleInputEmail1"
               className="form-label mx-2 my-3 fw-bold"
             >
-              Enter Specialist's name
+              Enter Doctor's name
             </label>
             <input
               onChange={(e) => {
@@ -156,16 +158,16 @@ export default function Join() {
               htmlFor="exampleInputEmail1"
               className="form-label mx-2 my-3 fw-bold"
             >
-              Enter Specialist's Email Address
+              Enter Doctor's Email Address
             </label>
             <input
               type="email"
               onChange={(e) => {
-                setLoginData({ 
-                    ...loginData, 
-                    email: e.target.value, 
-                    specID: value1
-                    });
+                setLoginData({
+                  ...loginData,
+                  email: e.target.value,
+                  specID: value1,
+                });
               }}
               className="form-control shadow rounded"
               placeholder="alex@gmail.com"

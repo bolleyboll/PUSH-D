@@ -1,10 +1,10 @@
 import "animate.css";
 
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import base_url from "../api/bootapi";
 import UserService from "../Service/UserService";
 import "./DocHome.css";
-import TryCode from "./TryCode";
+import axios from "axios";
 
 class DocHome extends React.Component {
   constructor(props) {
@@ -21,6 +21,37 @@ class DocHome extends React.Component {
   }
 
   render() {
+    const restrictSection = (username) => {
+      console.log(username)
+      console.log(document.getElementById(`section${username}`).value)
+      axios
+        .put(`${base_url}/restrictsection/${username}`, {
+          sec: document.getElementById(`section${username}`.value),
+        })
+        .then((response) => {
+          window.open("/docHome", "_self");
+        });
+    };
+    const sectionOrder = (username) => {
+      const str1 = document.getElementById(`firstSection${username}`).value;
+      const str2 = str1.concat(
+        ", ",
+        document.getElementById(`secondSection${username}`).value,
+        ", ",
+        document.getElementById(`thirdSection${username}`).value,
+        ", ",
+        document.getElementById(`fourthSection${username}`).value,
+        ", ",
+        document.getElementById(`fifthSection${username}`).value
+      );
+      console.log(username);
+      console.log(str2);
+      axios
+        .put(`${base_url}/doctor/sectionorder/${username}`, { sectionOrder: str2 })
+        .then((response) => {
+          window.open("/docHome", "_self");
+        });
+    };
     return (
       <>
         <div className="container my-5 text-center">
@@ -45,7 +76,7 @@ class DocHome extends React.Component {
                       <>
                         <tr
                           data-bs-toggle="collapse"
-                          data-bs-target={"#" + patient.username}
+                          data-bs-target={"#h" + patient.username}
                           className="accordion-toggle"
                         >
                           <td>{patient.name}</td>
@@ -60,7 +91,7 @@ class DocHome extends React.Component {
                           <td colspan="12" className="hiddenRow">
                             <div
                               className="accordian-body collapse"
-                              id={patient.username}
+                              id={"h" + patient.username}
                             >
                               <table className="table table-warning">
                                 <thead>
@@ -123,24 +154,74 @@ class DocHome extends React.Component {
                                             aria-labelledby="headingOne"
                                             data-bs-parent="#accordionExample"
                                           >
-                                            Hello
                                             <form>
-                                              <div class="mb-3">
-                                                <label
-                                                  for="exampleInputPassword1"
-                                                  class="form-label"
-                                                >
-                                                  Enter Section Order
-                                                </label>
+                                              <div className="my-3 mx-3">
                                                 <input
                                                   type="text"
-                                                  class="form-control"
-                                                  id="exampleInputPassword1"
+                                                  className="form-control"
+                                                  id={
+                                                    "firstSection" +
+                                                    patient.username
+                                                  }
+                                                  placeholder="Enter First Section"
                                                 />
                                               </div>
+                                              <div className="my-3 mx-3">
+                                                <input
+                                                  type="text"
+                                                  className="form-control"
+                                                  id={
+                                                    "secondSection" +
+                                                    patient.username
+                                                  }
+                                                  placeholder="Enter Second Section"
+                                                />
+                                              </div>
+
+                                              <div className="my-3 mx-3">
+                                                <input
+                                                  type="text"
+                                                  className="form-control"
+                                                  id={
+                                                    "thirdSection" +
+                                                    patient.username
+                                                  }
+                                                  placeholder="Enter Third Section"
+                                                />
+                                              </div>
+
+                                              <div className="my-3 mx-3">
+                                                <input
+                                                  type="text"
+                                                  className="form-control"
+                                                  id={
+                                                    "fourthSection" +
+                                                    patient.username
+                                                  }
+                                                  placeholder="Enter Fourth Section"
+                                                />
+                                              </div>
+
+                                              <div className="my-3 mx-3">
+                                                <input
+                                                  type="text"
+                                                  className="form-control"
+                                                  id={
+                                                    "fifthSection" +
+                                                    patient.username
+                                                  }
+                                                  placeholder="Enter Fifth Section"
+                                                />
+                                              </div>
+
                                               <button
-                                                type="submit"
-                                                class="btn btn-primary"
+                                                type="button"
+                                                className="btn btn-primary my-3"
+                                                onClick={() => {
+                                                  sectionOrder(
+                                                    patient.username
+                                                  );
+                                                }}
                                               >
                                                 Submit
                                               </button>
@@ -174,7 +255,29 @@ class DocHome extends React.Component {
                                             aria-labelledby="headingTwo"
                                             data-bs-parent="#accordionExample"
                                           >
-                                            hello section
+                                            <form>
+                                              <div className="my-3 mx-3">
+                                                <input
+                                                  type="number"
+                                                  className="form-control"
+                                                  id={
+                                                    "section" + patient.username
+                                                  }
+                                                  placeholder="Enter Section number"
+                                                />
+                                              </div>
+                                              <button
+                                                type="button"
+                                                className="btn btn-primary my-3"
+                                                onClick={() => {
+                                                  restrictSection(
+                                                    patient.username
+                                                  );
+                                                }}
+                                              >
+                                                Submit
+                                              </button>
+                                            </form>
                                           </div>
                                         </div>
                                       </div>
@@ -189,6 +292,7 @@ class DocHome extends React.Component {
                     ))}
                   </tbody>
                 </table>
+                
               </div>
             </div>
           </div>

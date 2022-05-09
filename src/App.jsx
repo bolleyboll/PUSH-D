@@ -22,6 +22,9 @@ import Section4 from "./Components/Section4";
 import Section5 from "./Components/Section5";
 import PatientDetails from "./Components/PatientDetails";
 import PatientSections from "./Components/PatientSections";
+import DoctorJoin from "./Components/DoctorJoin";
+import SpecialistJoin from "./Components/SpecialistJoin";
+import AdminJoin from "./Components/AdminJoin";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import cookies from 'js-cookie'
@@ -53,6 +56,18 @@ function App() {
     <>
       <Router>
         <Switch>
+        <Route path="/adminJoin">
+            <AdminNavbar />
+            <AdminJoin />
+          </Route>
+        <Route path="/speJoin">
+            <AdminNavbar />
+            <SpecialistJoin />
+          </Route>
+        <Route path="/docJoin">
+            <AdminNavbar />
+            <DoctorJoin />
+          </Route>
           <Route path="/aboutUs">
             <Navbar />
             <AboutUs />

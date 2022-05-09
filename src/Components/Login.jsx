@@ -21,6 +21,7 @@ export default function Login() {
     e.preventDefault();
   };
   const postDataToServer = (data) => {
+    sessionStorage.setItem("username",data.username)
     axios.post(`${base_url}/${data.role}/signin`, data).then(
       (response) => {
         sessionStorage.setItem("userName", response.data);
@@ -108,10 +109,10 @@ export default function Login() {
             className="form-control shadow rounded"
             aria-label="Default select example"
           >
-            <option defaultValue="Select role" disabled>
+            <option defaultValue="Select role">
               Select role
             </option>
-            <option value="patient" selected>
+            <option value="patient">
               Patient
             </option>
             <option value="doctor">Doctor</option>

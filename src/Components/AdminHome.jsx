@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 export default function AdminHome() {
   return (
     <div class="container-fluid pt-5 p-5">
-      <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="row row-cols-1 row-cols-md-3 g-4 mx-4">
         <div class="col">
           <div class="card h-100 shadow rounded float-start">
-            <img src="slide_1.jpg" class="card-img-top" alt="..." />
+            <img src="img_2.png" class="card-img-top" alt="..." />
             <div class="card-body">
               <h5 class="card-title">Manage Specialists</h5>
               <p class="card-text">
@@ -47,14 +47,11 @@ export default function AdminHome() {
                 Edit Specialist
               </Link>
             </div>
-            <div class="card-footer">
-              <small class="text-muted">Last updated 3 mins ago</small>
-            </div>
           </div>
         </div>
         <div class="col">
           <div class="card h-100 shadow rounded float-start">
-            <img src="slide_1.jpg" class="card-img-top" alt="..." />
+            <img src="img_3.png" class="card-img-top" alt="..." />
             <div class="card-body">
               <h5 class="card-title">Manage Doctors</h5>
               <p class="card-text">
@@ -94,14 +91,11 @@ export default function AdminHome() {
                 Edit Doctor
               </Link>
             </div>
-            <div class="card-footer">
-              <small class="text-muted">Last updated 3 mins ago</small>
-            </div>
           </div>
         </div>
         <div class="col">
-          <div class="card h-100 shadow rounded float-start">
-            <img src="slide_1.jpg" class="card-img-top" alt="..." />
+          <div class="card h-100 shadow rounded float-start ">
+            <img src="img_1.png" class="card-img-top" alt="..." />
             <div class="card-body">
               <h5 class="card-title">Manage Patients</h5>
               <p class="card-text">
@@ -140,9 +134,6 @@ export default function AdminHome() {
               >
                 Edit Patient
               </Link>
-            </div>
-            <div class="card-footer">
-              <small class="text-muted">Last updated 3 mins ago</small>
             </div>
           </div>
         </div>

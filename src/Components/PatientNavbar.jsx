@@ -107,7 +107,7 @@ export default function PatientNavbar() {
               <li className="nav-item">
                 <div className="dropdown">
                   <button
-                    class="btn btn-primary shadow dropdown-toggle"
+                    className="btn btn-primary shadow dropdown-toggle"
                     type="button"
                     data-bs-toggle="dropdown"
                     style={{
@@ -116,24 +116,24 @@ export default function PatientNavbar() {
                       borderColor: "#00ADEF",
                     }}
                   >
-                    PATIENT'S ID
+                    {sessionStorage.getItem("username")}
                   </button>
                   <ul
-                    class="dropdown-menu"
+                    className="dropdown-menu"
                     aria-labelledby="dropdownMenuButton1"
                   >
                     <li>
-                      <Link class="dropdown-item" to="/patChangePass">
+                      <Link className="dropdown-item" to="/patChangePass">
                         Change Password
                       </Link>
                     </li>
                     <li>
-                      <Link class="dropdown-item" to="/patEditProfile">
+                      <Link className="dropdown-item" to="/patEditProfile">
                         Edit Profile
                       </Link>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="/">
+                      <a className="dropdown-item" href="/">
                         Logout
                       </a>
                     </li>

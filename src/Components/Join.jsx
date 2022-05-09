@@ -48,11 +48,17 @@ export default function Join() {
     axios.post(`${base_url}/patient/register`, data).then(
       (response) => {
         console.log(response.data);
+        if(response.data==="USER ALREADY EXISTS"){
+          console.log("Error!!!!!");
+          setAlert(null);
+          setAlert1(null);
+          showAlert2("Error !", "Success");
+        }else{
         console.log("success!");
         setAlert(null);
         setAlert2(null);
         showAlert1("Successfully Registered you can now login!", "Success");
-      },
+      }},
       (error) => {
         console.log(error);
         console.log("error!");

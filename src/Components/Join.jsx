@@ -220,7 +220,7 @@ export default function Join() {
               aria-label="Default select example"
               required
             >
-              <option defaultValue="Select role" disabled>
+              <option defaultValue="Select role">
                 Select gender
               </option>
               <option value="Male">Male</option>
@@ -282,7 +282,7 @@ export default function Join() {
               aria-label="Default select example"
               required
             >
-              <option defaultValue="Select marital status" disabled>
+              <option defaultValue="Select marital status">
                 Select marital status
               </option>
               <option value="Single">Single</option>
@@ -338,7 +338,7 @@ export default function Join() {
               aria-label="Default select example"
               required
             >
-              <option defaultValue="Select Highest Education" disabled>
+              <option defaultValue="Select Highest Education">
                 Select Highest Education
               </option>
               <option value="10th">10th</option>

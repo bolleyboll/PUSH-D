@@ -109,10 +109,10 @@ export default function Login() {
             className="form-control shadow rounded"
             aria-label="Default select example"
           >
-            <option defaultValue="Select role" disabled>
+            <option defaultValue="Select role">
               Select role
             </option>
-            <option value="patient" selected>
+            <option value="patient">
               Patient
             </option>
             <option value="doctor">Doctor</option>

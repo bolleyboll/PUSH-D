@@ -87,7 +87,7 @@ window.onpopstate = function () {
           </Route>
 
           <Route path="/patDash">
-            <SpecNavbar />
+            <PatientNavbar />
             <PatientHome />
           </Route>
           <Route path="/patSec1">

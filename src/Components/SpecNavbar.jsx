@@ -132,7 +132,7 @@ export default function SpecNavbar() {
                       borderColor: "#00ADEF",
                     }}
                   >
-                    SPECIALIST'S ID
+                    {sessionStorage.getItem("userName")}
                   </button>
                   <ul
                     className="dropdown-menu"

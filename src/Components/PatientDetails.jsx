@@ -8,7 +8,7 @@ class PatientDetails extends React.Component {
     constructor(props){
         super(props)
         this.state = {
-            users:[]
+            users:{}
         }
     }
 
@@ -20,6 +20,9 @@ class PatientDetails extends React.Component {
     }
 
     render (){
+     if( this.state.users === undefined || this.state.users.doctor === undefined || this.state.users.doctor.specialist === undefined) {
+          return <div>Loading...</div>
+      }
         return (<>
             <div className='mx-3 text-center'>
                 <table className = "table rounded shadow float-start my-5 mx-5" style={{width:"300px"}}>
@@ -74,7 +77,7 @@ class PatientDetails extends React.Component {
                                 </tr>
                                 <tr>
                                      <th scope="row">Your doctor Id</th>
-                                    <td>{this.state.users.doctorID} </td>   
+                                    <td>{this.state.users.doctor.name} </td>   
                                 </tr>
 
 

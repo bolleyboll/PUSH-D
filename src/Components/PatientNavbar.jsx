@@ -56,11 +56,11 @@ export default function PatientNavbar() {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div
-            className="collapse navbar-collapse flex-row-reverse"
+            className="collapse navbar-collapse flex-row-reverse mr-3"
             id="navbarNav"
           >
             <ul className="navbar-nav">
-            <li className="nav-item my-2 mx-2">
+              <li className="nav-item my-2 mx-2">
                 <div className="dropdown">
                   <button
                     class="btn btn-primary shadow dropdown-toggle"
@@ -94,17 +94,33 @@ export default function PatientNavbar() {
                   </ul>
                 </div>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link active shadow" to="/patDash" style={{borderRadius:"12px",color:'white',backgroundColor:"#00ADEF"}}>
-                    HOME   
+              <li className="nav-item mt-2 ml-2">
+                <Link
+                  className="nav-link active shadow"
+                  to="/patDash"
+                  style={{
+                    borderRadius: "12px",
+                    color: "white",
+                    backgroundColor: "#00ADEF",
+                  }}
+                >
+                  Home
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link active shadow mx-5" to="/patAbout" style={{borderRadius:"12px",color:'white',backgroundColor:"#00ADEF"}}>
-                    ABOUT
-                  </Link>
+              <li className="nav-item mt-2">
+                <Link
+                  className="nav-link active shadow mx-5"
+                  to="/patAbout"
+                  style={{
+                    borderRadius: "12px",
+                    color: "white",
+                    backgroundColor: "#00ADEF",
+                  }}
+                >
+                  About
+                </Link>
               </li>
-              <li className="nav-item">
+              <li className="nav-item mt-2">
                 <div className="dropdown">
                   <button
                     className="btn btn-primary shadow dropdown-toggle"
@@ -118,15 +134,11 @@ export default function PatientNavbar() {
                   >
                     {sessionStorage.getItem("username")}
                   </button>
+
                   <ul
                     className="dropdown-menu"
                     aria-labelledby="dropdownMenuButton1"
                   >
-                    <li>
-                      <Link className="dropdown-item" to="/patChangePass">
-                        Change Password
-                      </Link>
-                    </li>
                     <li>
                       <Link className="dropdown-item" to="/patEditProfile">
                         Edit Profile

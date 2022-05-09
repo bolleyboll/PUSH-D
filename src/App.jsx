@@ -83,7 +83,7 @@ function App() {
           </Route>
 
           <Route path="/patDash">
-            <PatientNavbar />
+            <SpecNavbar />
             <PatientHome />
           </Route>
           <Route path="/patSec1">

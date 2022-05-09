@@ -96,7 +96,7 @@ export default function SpecNavbar() {
               </li>
               <li className="nav-item">
                 <Link
-                  className="nav-link active shadow"
+                  className="nav-link active shadow mt-2 ml-2"
                   to="/patDash"
                   style={{
                     borderRadius: "12px",
@@ -109,7 +109,7 @@ export default function SpecNavbar() {
               </li>
               <li className="nav-item">
                 <Link
-                  className="nav-link active shadow mx-5"
+                  className="nav-link active shadow mx-5 mt-2"
                   to="/patAbout"
                   style={{
                     borderRadius: "12px",
@@ -123,7 +123,7 @@ export default function SpecNavbar() {
               <li className="nav-item">
                 <div className="dropdown">
                   <button
-                    className="btn btn-primary shadow dropdown-toggle"
+                    className="btn btn-primary shadow dropdown-toggle mt-2"
                     type="button"
                     data-bs-toggle="dropdown"
                     style={{
@@ -138,11 +138,6 @@ export default function SpecNavbar() {
                     className="dropdown-menu"
                     aria-labelledby="dropdownMenuButton1"
                   >
-                    <li>
-                      <Link className="dropdown-item" to="/patChangePass">
-                        Change Password
-                      </Link>
-                    </li>
                     <li>
                       <Link className="dropdown-item" to="/patEditProfile">
                         Edit Profile

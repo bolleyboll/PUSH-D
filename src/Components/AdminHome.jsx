@@ -6,133 +6,58 @@ export default function AdminHome() {
     <div class="container-fluid pt-5 p-5">
       <div class="row row-cols-1 row-cols-md-3 g-4 mx-4">
         <div class="col">
-          <div class="card h-100 shadow rounded float-start">
-            <img src="img_2.png" class="card-img-top" alt="..." />
+          <div class="card text-center h-100 shadow rounded float-start">
+            <img src="img_2.png" style={{height:"455px"}} class="card-img-top" alt="..." />
             <div class="card-body">
-              <h5 class="card-title">Manage Specialists</h5>
-              <p class="card-text">
-                Add,delete and edit the details of Specialists.
-              </p>
+              <h5 class="card-title">Add,delete and edit the details of Specialists.</h5>
               <Link
-                to="/addSpec"
-                className="btn btn-primary stretched-link mx-1 shadow"
+                to="/manageSpec"
+                className="btn btn-primary align-center stretched-link mx-1 shadow"
                 style={{
                   borderRadius: "12px",
                   backgroundColor: "#00ADEF",
                   borderColor: "#00ADEF",
                 }}
               >
-                Add Specialist
-              </Link>
-              <Link
-                to="/deleteSpec"
-                className="btn btn-primary mx-1 shadow"
-                style={{
-                  borderRadius: "12px",
-                  backgroundColor: "#00ADEF",
-                  borderColor: "#00ADEF",
-                }}
-              >
-                Delete Specialist
-              </Link>
-              <Link
-                to="/editSpec"
-                className="btn btn-primary mx-1 shadow"
-                style={{
-                  borderRadius: "12px",
-                  backgroundColor: "#00ADEF",
-                  borderColor: "#00ADEF",
-                }}
-              >
-                Edit Specialist
+                Manage Specialists
               </Link>
             </div>
           </div>
         </div>
         <div class="col">
-          <div class="card h-100 shadow rounded float-start">
+          <div class="card text-center h-100 shadow rounded float-start">
             <img src="img_3.png" class="card-img-top" alt="..." />
             <div class="card-body">
-              <h5 class="card-title">Manage Doctors</h5>
-              <p class="card-text">
-                Add,delete and edit the details of Doctors.
-              </p>
+              <h5 class="card-title">Add,delete and edit the details of Doctors.</h5>
               <Link
-                to="#"
-                className="btn btn-primary mx-1 shadow"
+                to="/manageDoctor"
+                className="btn btn-primary mx-1 stretched-link shadow"
                 style={{
                   borderRadius: "12px",
                   backgroundColor: "#00ADEF",
                   borderColor: "#00ADEF",
                 }}
               >
-                Add Doctor
-              </Link>
-              <Link
-                to="#"
-                className="btn btn-primary mx-1 shadow"
-                style={{
-                  borderRadius: "12px",
-                  backgroundColor: "#00ADEF",
-                  borderColor: "#00ADEF",
-                }}
-              >
-                Delete Doctor
-              </Link>
-              <Link
-                to="#"
-                className="btn btn-primary mx-1 shadow"
-                style={{
-                  borderRadius: "12px",
-                  backgroundColor: "#00ADEF",
-                  borderColor: "#00ADEF",
-                }}
-              >
-                Edit Doctor
+                Manage Doctors
               </Link>
             </div>
           </div>
         </div>
         <div class="col">
-          <div class="card h-100 shadow rounded float-start ">
+          <div class="card text-center h-100 shadow rounded float-start ">
             <img src="img_1.png" class="card-img-top" alt="..." />
             <div class="card-body">
-              <h5 class="card-title">Manage Patients</h5>
-              <p class="card-text">
-                Add,delete and edit the details of Patients.
-              </p>
+              <h5 class="card-title">Add,delete and edit the details of Patients.</h5>
               <Link
-                to="#"
-                className="btn btn-primary mx-1 shadow"
+                to="/managePat"
+                className="btn btn-primary mx-1 stretched-link shadow"
                 style={{
                   borderRadius: "12px",
                   backgroundColor: "#00ADEF",
                   borderColor: "#00ADEF",
                 }}
               >
-                Add Patient
-              </Link>
-              <Link
-                to="#"
-                className="btn btn-primary mx-1 shadow"
-                style={{
-                  borderRadius: "12px",
-                  backgroundColor: "#00ADEF",
-                  borderColor: "#00ADEF",
-                }}
-              >
-                Delete Patient
-              </Link>
-              <Link
-                to="#"
-                className="btn btn-primary mx-1 shadow"
-                style={{
-                  borderRadius: "12px",
-                  backgroundColor: "#00ADEF",
-                  borderColor: "#00ADEF",
-                }}
-              >
-                Edit Patient
+                Manage Patients
               </Link>
             </div>
           </div>

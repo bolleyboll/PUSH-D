@@ -20,6 +20,9 @@ import Section2 from "./Components/Section2";
 import Section3 from "./Components/Section3";
 import Section4 from "./Components/Section4";
 import Section5 from "./Components/Section5";
+import ManageSpec from "./Components/ManageSpec";
+import ManageDoctor from "./Components/ManageDoctor";
+import ManagePat from "./Components/ManagePat";
 import PatientDetails from "./Components/PatientDetails";
 import PatientSections from "./Components/PatientSections";
 import DoctorJoin from "./Components/DoctorJoin";
@@ -27,7 +30,7 @@ import SpecialistJoin from "./Components/SpecialistJoin";
 import AdminJoin from "./Components/AdminJoin";
 import React from "react";
 import { useTranslation } from "react-i18next";
-import cookies from 'js-cookie'
+import cookies from "js-cookie";
 
 const languages = [
   {
@@ -46,7 +49,6 @@ const languages = [
     country_code: "ind",
   },
 ];
-
 
 function App() {
   const { t } = useTranslation();
@@ -135,6 +137,18 @@ function App() {
           <Route path="/adminDash">
             <AdminNavbar />
             <AdminHome />
+          </Route>
+          <Route path="/manageSpec">
+            <AdminNavbar />
+            <ManageSpec />
+          </Route>
+          <Route path="/manageDoctor">
+            <AdminNavbar />
+            <ManageDoctor />
+          </Route>
+          <Route path="/managePat">
+            <AdminNavbar />
+            <ManagePat />
           </Route>
           <Route path="/">
             <Navbar />

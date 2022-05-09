@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect, useState } from "react";
-import { Container, Form, FormGroup, Input, Button } from "reactstrap";
+import { Container, Form, FormGroup, Input, Button, Row, Col } from "reactstrap";
 import axios from "axios";
 import Pie_chart from "./Pie_chart";
 import ReactApexChart from "react-apexcharts";
@@ -49,6 +49,9 @@ const Section1 = () => {
   };
 
   return (
+    <Container>
+      <Row>
+        <Col md={8}>
     <div className="app_section">
       <div style={{ marginLeft: "5%", marginRight: "5%" }}>
         <Fragment>
@@ -289,12 +292,17 @@ const Section1 = () => {
               <Button type="reset" color="warning ms-2" className="btn-lg">
                 Clear
               </Button>
-              <Pie_chart/>
             </Container>
           </Form>
         </Fragment>
       </div>
     </div>
+    </Col>
+    <Col md={4}>
+    <Pie_chart name={1}/>
+    </Col>
+    </Row>
+    </Container>
   );
 };
 

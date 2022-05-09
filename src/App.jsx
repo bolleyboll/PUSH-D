@@ -26,6 +26,9 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import cookies from 'js-cookie'
 import TryCode from "./Components/TryCode";
+import ManageSpec from "./Components/ManageSpec";
+import ManageDoctor from "./Components/ManageDoctor";
+import ManagePat from "./Components/ManagePat";
 
 const languages = [
   {
@@ -65,6 +68,18 @@ function App() {
           <Route path="/login">
             <Navbar />
             <Login />
+          </Route>
+          <Route path="/manageSpec">
+            <AdminNavbar />
+            <ManageSpec />
+          </Route>
+          <Route path="/manageDoc">
+            <AdminNavbar />
+            <ManageDoctor />
+          </Route>
+          <Route path="/managePat">
+            <AdminNavbar />
+            <ManagePat />
           </Route>
 
           <Route path="/patDash">

@@ -77,7 +77,7 @@ window.onpopstate = function () {
             <AdminNavbar />
             <ManageSpec />
           </Route>
-          <Route path="/manageDoc">
+          <Route path="/manageDoctor">
             <AdminNavbar />
             <ManageDoctor />
           </Route>

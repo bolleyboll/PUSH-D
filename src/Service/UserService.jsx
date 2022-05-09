@@ -6,6 +6,8 @@ const GET_PATIENTS=`http://localhost:8080/doctor/${sessionStorage.getItem("usern
 const GET_SPEC_PATIENTS="http://localhost:8080/patients"
 const GET_DOCTORS="http://localhost:8080/doctors"
 const GET_CHAT=`http://localhost:8080/chat/get/${sessionStorage.getItem("username")}`
+const GET_DOCTOR_DETAILS='http://localhost:8081/doctors';
+const GET_ALL_PATIENT_DETAILS = 'http://localhost:8081/patients'
 class UserService {
 
     getPatient(){
@@ -23,6 +25,13 @@ class UserService {
     getChats(){
         return axios.get(GET_CHAT)
     }
+    getDoctor(){
+        return axios.get(GET_DOCTOR_DETAILS);
+    }
+    getAllPatients(){
+        return axios.get(GET_ALL_PATIENT_DETAILS);
+    }
+
 }
 
 export default new UserService();

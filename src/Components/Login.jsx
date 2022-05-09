@@ -3,6 +3,7 @@ import "animate.css";
 import axios from "axios";
 import base_url from "../api/bootapi";
 import Alert from "./Alert";
+import { Link } from "react-router-dom";
 
 export default function Login() {
   const [loginData, setLoginData] = useState({});
@@ -131,6 +132,19 @@ export default function Login() {
         >
           Submit
         </button>
+        <Link to="/forgetPassword">
+        <button
+          // type="submit"
+          className="btn btn-primary mx-5 my-3 shadow"
+          style={{
+            borderRadius: "12px",
+            backgroundColor: "#00ADEF",
+            borderColor: "#00ADEF",
+          }}
+        >
+          Forget Password
+        </button>
+        </Link>
         {/* <div style={{color:'red'}} className="text-center">{err}</div> */}
         <Alert alert={alert} />
       </form>

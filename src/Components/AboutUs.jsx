@@ -1,4 +1,5 @@
 import React from "react";
+import { t } from "i18next";
 
 export default function AboutUs() {
   return (
@@ -13,12 +14,10 @@ export default function AboutUs() {
               alt="..."
             />
             <div className="card-body">
-              <h5 className="card-title">Prof. T.K. Srikant</h5>
+              <h5 className="card-title">{t("as_h")}</h5>
               <p className="card-text">
                 <i>
-                  Dr. Srikanth obtained his Ph.D. in Computer Science from
-                  Cornell University in 1986, and has a B.Tech (Mech. Eng) from
-                  the Indian Institute of Technology, Madras.
+                {t("as_1")}
                 </i>
               </p>
             </div>
@@ -31,11 +30,10 @@ export default function AboutUs() {
             <div className="card cardAbout" style={{ width: "25rem" }}>
               <img src="aman.jpeg" className="card-img-top myyimg" alt="..." />
               <div className="card-body">
-                <h5 className="card-title">Aman Gupta</h5>
+                <h5 className="card-title">{t("as1")}</h5>
                 <p className="card-text">
                   <i>
-                    M.Tech in Computer Science <br /> International Institute of
-                    Information Technology
+                  {t("as_t")}
                   </i>
                 </p>
               </div>
@@ -49,11 +47,10 @@ export default function AboutUs() {
                 alt="..."
               />
               <div className="card-body">
-                <h5 className="card-title">Kunal Sharma</h5>
+                <h5 className="card-title">{t("as2")}</h5>
                 <p className="card-text">
                   <i>
-                    M.Tech in Computer Science <br /> International Institute of
-                    Information Technology
+                  {t("as_t")}
                   </i>
                 </p>
               </div>
@@ -67,11 +64,10 @@ export default function AboutUs() {
                 alt="..."
               />
               <div className="card-body">
-                <h5 className="card-title">Nikhil Mittal</h5>
+                <h5 className="card-title">{t("as3")}</h5>
                 <p className="card-text">
                   <i>
-                    M.Tech in Computer Science <br /> International Institute of
-                    Information Technology
+                  {t("as_t")}
                   </i>
                 </p>
               </div>
@@ -87,11 +83,10 @@ export default function AboutUs() {
                 alt="..."
               />
               <div className="card-body">
-                <h5 className="card-title">Shubham Nigam</h5>
+                <h5 className="card-title">{t("as4")}</h5>
                 <p className="card-text">
                   <i>
-                    M.Tech in Computer Science <br /> International Institute of
-                    Information Technology
+                  {t("as_t")}
                   </i>
                 </p>
               </div>
@@ -105,11 +100,10 @@ export default function AboutUs() {
                 alt="..."
               />
               <div className="card-body">
-                <h5 className="card-title">Vishal Govil</h5>
+                <h5 className="card-title">{t("as5")}</h5>
                 <p className="card-text">
                   <i>
-                    M.Tech in Computer Science <br /> International Institute of
-                    Information Technology
+                  {t("as_t")}
                   </i>
                 </p>
               </div>
@@ -123,11 +117,10 @@ export default function AboutUs() {
                 alt="..."
               />
               <div className="card-body">
-                <h5 className="card-title">Suchi Laad</h5>
+                <h5 className="card-title">{t("as6")}</h5>
                 <p className="card-text">
                   <i>
-                    M.Tech in Computer Science <br /> International Institute of
-                    Information Technology
+                  {t("as_t")}
                   </i>
                 </p>
               </div>

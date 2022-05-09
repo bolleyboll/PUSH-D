@@ -94,7 +94,6 @@ class SpecHome extends React.Component {
                                     <th>DOB</th>
                                     <th>Education</th>
                                     <th>Marital Status</th>
-                                    <th>Doctor</th>
                                     <th>Last Login</th>
                                     <th>Action</th>
                                   </tr>
@@ -113,7 +112,6 @@ class SpecHome extends React.Component {
                                     <td>{patient.dob}</td>
                                     <td>{patient.education}</td>
                                     <td>{patient.maritalStatus}</td>
-                                    <td>{patient.doctor.name}</td>
                                     <td>{patient.lastLogin}</td>
                                     <td>
                                       <button

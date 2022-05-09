@@ -11,6 +11,7 @@ class DocHome extends React.Component {
     super(props);
     this.state = {
       patients: [],
+      specialists:[]
     };
   }
 
@@ -18,9 +19,20 @@ class DocHome extends React.Component {
     UserService.getPatients().then((response) => {
       this.setState({ patients: response.data });
     });
+    UserService.getAllSpecialists().then((response) => {
+      this.setState({ specialists: response.data });
+    });
+    
   }
 
   render() {
+    const sendMessage = (username) => {
+      console.log({senderId:username,receiverId:document.getElementById("doctorId").value,message:document.getElementById("msg").value});
+      axios.post(`${base_url}/chat/save`,{id:Math.floor(Math.random() * 1000),senderId:username,receiverId:document.getElementById("doctorId").value,message:document.getElementById("msg").value}).then((response) => {
+        console.log("message sent")  
+      });
+    };
+    
     const restrictSection = (username) => {
       console.log(username)
       console.log(document.getElementById(`section${username}`).value)
@@ -88,7 +100,7 @@ class DocHome extends React.Component {
                         </tr>
 
                         <tr>
-                          <td colspan="12" className="hiddenRow">
+                          <td colSpan="12" className="hiddenRow">
                             <div
                               className="accordian-body collapse"
                               id={"h" + patient.username}
@@ -297,6 +309,46 @@ class DocHome extends React.Component {
             </div>
           </div>
         </div>
+        <form className="shadow text-center my-5" style={{marginLeft:"30%",marginRight:"30%"}}>
+        <div className="mx-5">
+            <label
+              htmlFor="exampleInputPassword1"
+              className="form-label mx-2 my-3 fw-bold"
+            >
+            </label>
+            <select
+              id="doctorId"
+              className="form-control shadow rounded"
+              aria-label="Default select example"
+              required
+            >
+              <option defaultValue="Select role">
+                Select doctor
+              </option>
+              {this.state.specialists.map((specialist) => (
+              <option value={specialist.username}>{specialist.username}</option>
+              ))}
+            </select>
+          </div>
+          <div className="mx-5">
+          <label
+              htmlFor="exampleInputPassword1"
+              className="form-label mx-2 my-3 fw-bold"
+            >
+            </label>
+            
+            <textarea
+              type="text"
+              className="form-control shadow rounded"
+              id="msg"
+              placeholder="Enter your message"
+            />
+          </div>
+          
+          <button type="button" className="btn btn-primary my-3" onClick={()=>{sendMessage(sessionStorage.getItem("username"))}}>
+            Submit
+          </button>
+        </form>
       </>
     );
   }

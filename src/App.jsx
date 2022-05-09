@@ -31,6 +31,8 @@ import ManageDoctor from "./Components/ManageDoctor";
 import ManagePat from "./Components/ManagePat";
 import DoctorEdit from "./Components/DoctorEdit";
 import ForgetPassword1 from "./Components/ForgetPassword1";
+import PatientChat from "./Components/PatientChat";
+import ForgetPassword from "./Components/ForgetPassword";
 
 const languages = [
   {
@@ -92,6 +94,11 @@ window.onpopstate = function () {
             <ManagePat />
           </Route>
 
+          <Route path="/patChat">
+            <PatientNavbar />
+            <PatientDetails />
+            <PatientChat/>
+          </Route>
           <Route path="/patDash">
             <PatientNavbar />
             <PatientHome />

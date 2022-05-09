@@ -18,10 +18,12 @@ class SpecHome extends React.Component {
       this.setState({ patients: response.data });
     });
     UserService.getChats().then((response) => {
+      console.log("Chats")
       console.log(response.data);
       this.setState({ chats: response.data });
     });
     UserService.getSpecDoctors().then((response) => {
+      console.log("Doctors")
       console.log(response.data);
       this.setState({ doctors: response.data });
     });
@@ -166,7 +168,7 @@ class SpecHome extends React.Component {
             </div>
           </div>
         </div>
-        <form className="shadow text-center my-5" style={{marginLeft:"30%",marginRight:"30%"}}>
+        <form className="shadow text-center my-5" style={{marginLeft:"35%",marginRight:"35%"}}>
         <div className="mx-5">
             <label
               htmlFor="exampleInputPassword1"
@@ -206,7 +208,7 @@ class SpecHome extends React.Component {
             Submit
           </button>
         </form>
-      </>
+        </>
     );
   }
 }

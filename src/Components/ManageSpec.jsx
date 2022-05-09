@@ -3,7 +3,9 @@ import { ThemeProvider } from "styled-components";
 import SpecService from "../Service/SpecService";
 import base_url from "../api/bootapi";
 import axios from "axios";
-import {toast} from "react-toastify"
+import { toast, ToastContainer } from "react-toastify";
+import { Row, Col } from "reactstrap";
+import SpecialistJoin from "./SpecialistJoin";
 
 class ManageSpec extends React.Component {
   constructor(props) {
@@ -20,61 +22,71 @@ class ManageSpec extends React.Component {
     });
   }
 
-
   render() {
-    const deleteSpec=(username)=>{
-        axios.delete(`${base_url}/specialist/del/${username}`).then(
-            (response)=>
-            {
-                toast.success("Entry has been deleted")
-            },
-            (error)=>
-            {
-                toast.error("Something went wrong")
-            }
-        )
-    }
+    const deleteTask = (username) => {
+      let newTodos = this.state.users.filter(
+        (todo) => todo.username !== username
+      );
+      this.setState({ users: newTodos });
+    };
+
+    const deleteSpec = (username) => {
+      axios.delete(`${base_url}/specialist/del/${username}`).then(
+        (response) => {
+          deleteTask(username);
+          toast.success("Entry has been deleted");
+        },
+        (error) => {
+          toast.error("Something went wrong");
+        }
+      );
+    };
     return (
       <>
-        <div className="container mx-3 text-center">
-          <table
-            className="table table-hover rounded shadow my-5 mx-5 table-bordered"
-            style={{ width: "1200px" }}
-          >
-            <thead>
-              <tr>
-                <td>Specialist ID</td>
-                <td>Username</td>
-                <td>Name</td>
-                <td>E-mail</td>
-                <td>Options</td>
-              </tr>
-            </thead>
-            <tbody>
-              {
-                  this.state.users.map(
-                      user =>
-                <tr key={user.specID}>
-                  <th scope="row">{user.specID}</th>
-                  <td>{user.username} </td>
-                  <td>{user.name}</td>
-                  <td>{user.email}</td>
-                  <td>
+        <Row>
+          <Col md={8}>
+            <div className="container mx-3 text-center">
+              <table
+                className="table table-hover rounded shadow my-5 mx-5 table-bordered"
+                style={{ width: "1200px" }}
+              >
+                <thead>
+                  <tr>
+                    <td>Specialist ID</td>
+                    <td>Username</td>
+                    <td>Name</td>
+                    <td>E-mail</td>
+                    <td>Options</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  {this.state.users.map((user) => (
+                    <tr key={user.specID}>
+                      <th scope="row">{user.specID}</th>
+                      <td>{user.username} </td>
+                      <td>{user.name}</td>
+                      <td>{user.email}</td>
                       <td>
-                  <button type="button" className="btn btn-primary">
-                    Edit Specialist
-                  </button>
-                  </td>
-                  <td>
-                  <button type="button"  className="btn btn-danger" onClick={()=> {deleteSpec(user.username)}}>
-                    Delete Specialist
-                  </button>
-                  </td>
-                </td>
-                </tr>
-                  )
-              }
-              {/* <tr>
+                        <td>
+                          <button type="button" className="btn btn-primary">
+                            Edit Specialist
+                          </button>
+                        </td>
+                        <td>
+                          <button
+                            type="button"
+                            className="btn btn-danger"
+                            onClick={() => {
+                              deleteSpec(user.username);
+                            }}
+                          >
+                            Delete Specialist
+                          </button>
+                        </td>
+                      </td>
+                    </tr>
+                  ))}
+                  {/* <tr>
                 <th scope="row">Name</th>
                 <td>{this.state.users.name} </td>
               </tr>
@@ -86,9 +98,40 @@ class ManageSpec extends React.Component {
                 <th scope="row">Your Specialist ID</th>
                 <td>{this.state.users.specID} </td>
               </tr> */}
-            </tbody>
-          </table>
-        </div>
+                </tbody>
+              </table>
+            </div>
+          </Col>
+          <Col md={4}>
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                    Add Specialist
+                  </button>
+                </h2>
+                <div
+                  id="collapseTwo"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingTwo"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                      <SpecialistJoin />
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </Col>
+        </Row>
       </>
     );
   }

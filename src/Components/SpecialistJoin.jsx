@@ -45,7 +45,7 @@ export default function Join() {
   };
   const [err, setErr] = useState("");
   const postDataToServer = (data) => {
-    axios.post(`${base_url}/patient/register`, data).then(
+    axios.post(`${base_url}/specialist/register`, data).then(
       (response) => {
         console.log(response.data);
         if(response.data==="USER ALREADY EXISTS"){
@@ -70,7 +70,7 @@ export default function Join() {
   };
   return (
     <>
-      <div style={{ marginLeft: "20%", marginRight: "20%" }}>
+      <div style={{ marginLeft: "5%", marginRight: "5%" }}>
         <form
           onSubmit={handleForm}
           className="rounded my-4 mx-5 pt-2 shadow"

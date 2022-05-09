@@ -30,7 +30,7 @@ import ManageSpec from "./Components/ManageSpec";
 import ManageDoctor from "./Components/ManageDoctor";
 import ManagePat from "./Components/ManagePat";
 import DoctorEdit from "./Components/DoctorEdit";
-import ForgetPassword from "./Components/ForgetPassword";
+import ForgetPassword1 from "./Components/ForgetPassword1";
 
 const languages = [
   {
@@ -77,7 +77,7 @@ window.onpopstate = function () {
           </Route>
           <Route path="/forgetPassword">
             <Navbar />
-            <ForgetPassword />
+            <ForgetPassword1 />
           </Route>
           <Route path="/manageSpec">
             <AdminNavbar />

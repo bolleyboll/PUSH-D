@@ -5,7 +5,6 @@ import Alert from "./Alert";
 import PassConPassMatch from "./PassConPassMatch";
 import RegError from "./RegError";
 import RegSuccess from "./RegSuccess";
-
 export default function PatientEditProfile() {
   const [loginData, setLoginData] = useState({});
   const [alert, setAlert] = useState(null);
@@ -46,14 +45,20 @@ export default function PatientEditProfile() {
   };
   const [err, setErr] = useState("");
   const postDataToServer = (data) => {
-    axios.post(`${base_url}/patient/register`, data).then(
+    axios.put(`${base_url}/patient/update`, data).then(
       (response) => {
         console.log(response.data);
+        if(response.data==="USER ALREADY EXISTS"){
+          console.log("Error!!!!!");
+          setAlert(null);
+          setAlert1(null);
+          showAlert2("Error !", "Success");
+        }else{
         console.log("success!");
         setAlert(null);
         setAlert2(null);
-        showAlert1("Successfully Registered you can now login!", "Success");
-      },
+        showAlert1("Profile edited", "Success");
+      }},
       (error) => {
         console.log(error);
         console.log("error!");
@@ -71,10 +76,10 @@ export default function PatientEditProfile() {
           className="rounded my-4 mx-5 pt-2 shadow"
           style={{ backgroundColor: "#89C7E7" }}
         >
-          <h3 className="pt-5 fs-1 text-center">New Patient Registration</h3>
+          <h3 className="pt-5 fs-1 text-center">Edit Patient</h3>
           <div className="mx-5">
             <label
-              htmlFor="exampleInputEmail1"
+              for="exampleInputEmail1"
               className="form-label mx-2 my-3 fw-bold"
             >
               Enter a Username
@@ -93,7 +98,7 @@ export default function PatientEditProfile() {
           </div>
           <div className="mx-5">
             <label
-              htmlFor="exampleInputPassword1"
+              for="exampleInputPassword1"
               className="form-label mx-2 my-3 fw-bold"
             >
               Enter a Password
@@ -111,7 +116,7 @@ export default function PatientEditProfile() {
           </div>
           <div className="mx-5">
             <label
-              htmlFor="exampleInputPassword1"
+              for="exampleInputPassword1"
               className="form-label mx-2 my-3 fw-bold"
             >
               Confirm Password
@@ -129,7 +134,7 @@ export default function PatientEditProfile() {
           </div>
           <div className="mx-5">
             <label
-              htmlFor="exampleInputEmail1"
+              for="exampleInputEmail1"
               className="form-label mx-2 my-3 fw-bold"
             >
               Enter your name
@@ -148,7 +153,7 @@ export default function PatientEditProfile() {
           </div>
           <div className="mx-5">
             <label
-              htmlFor="exampleInputEmail1"
+              for="exampleInputEmail1"
               className="form-label mx-2 my-3 fw-bold"
             >
               Enter you Email Address
@@ -167,7 +172,7 @@ export default function PatientEditProfile() {
           </div>
           <div className="mx-5">
             <label
-              htmlFor="exampleInputEmail1"
+              for="exampleInputEmail1"
               className="form-label mx-2 my-3 fw-bold"
             >
               Enter your Mobile Number
@@ -189,7 +194,7 @@ export default function PatientEditProfile() {
           </div>
           <div className="mx-5">
             <label
-              htmlFor="exampleInputEmail1"
+              for="exampleInputEmail1"
               className="form-label mx-2 my-3 fw-bold"
             >
               Enter your Age
@@ -207,7 +212,7 @@ export default function PatientEditProfile() {
           </div>
           <div className="mx-5">
             <label
-              htmlFor="exampleInputPassword1"
+              for="exampleInputPassword1"
               className="form-label mx-2 my-3 fw-bold"
             >
               Select your Gender
@@ -221,7 +226,7 @@ export default function PatientEditProfile() {
               aria-label="Default select example"
               required
             >
-              <option defaultValue="Select role" disabled>
+              <option defaultValue="Select role">
                 Select gender
               </option>
               <option value="Male">Male</option>
@@ -231,7 +236,7 @@ export default function PatientEditProfile() {
           </div>
           <div className="mx-5">
             <label
-              htmlFor="exampleInputEmail1"
+              for="exampleInputEmail1"
               className="form-label mx-2 my-3 fw-bold"
             >
               Enter your Date of Birth
@@ -250,7 +255,7 @@ export default function PatientEditProfile() {
           </div>
           <div className="mx-5">
             <label
-              htmlFor="exampleInputEmail1"
+              for="exampleInputEmail1"
               className="form-label mx-2 my-3 fw-bold"
             >
               Enter your City
@@ -269,7 +274,7 @@ export default function PatientEditProfile() {
           </div>
           <div className="mx-5">
             <label
-              htmlFor="exampleInputPassword1"
+              for="exampleInputPassword1"
               className="form-label mx-2 my-3 fw-bold"
             >
               Select Your Marital Status
@@ -283,7 +288,7 @@ export default function PatientEditProfile() {
               aria-label="Default select example"
               required
             >
-              <option defaultValue="Select marital status" disabled>
+              <option defaultValue="Select marital status">
                 Select marital status
               </option>
               <option value="Single">Single</option>
@@ -292,7 +297,7 @@ export default function PatientEditProfile() {
           </div>
           <div className="mx-5">
             <label
-              htmlFor="exampleInputEmail1"
+              for="exampleInputEmail1"
               className="form-label mx-2 my-3 fw-bold"
             >
               Enter your Occupation
@@ -311,7 +316,7 @@ export default function PatientEditProfile() {
           </div>
           <div className="mx-5">
             <label
-              htmlFor="exampleInputPassword1"
+              for="exampleInputPassword1"
               className="form-label mx-2 my-3 fw-bold"
             >
               Select the Highest Education you've received
@@ -339,7 +344,7 @@ export default function PatientEditProfile() {
               aria-label="Default select example"
               required
             >
-              <option defaultValue="Select Highest Education" disabled>
+              <option defaultValue="Select Highest Education">
                 Select Highest Education
               </option>
               <option value="10th">10th</option>
@@ -367,5 +372,5 @@ export default function PatientEditProfile() {
         </form>
       </div>
     </>
-  )
+  );
 }

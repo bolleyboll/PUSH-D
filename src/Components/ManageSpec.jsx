@@ -6,6 +6,7 @@ import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
 import { Row, Col } from "reactstrap";
 import SpecialistJoin from "./SpecialistJoin";
+import SpecialistEdit from "./SpecialistEdit";
 
 class ManageSpec extends React.Component {
   constructor(props) {
@@ -67,22 +68,15 @@ class ManageSpec extends React.Component {
                       <td>{user.name}</td>
                       <td>{user.email}</td>
                       <td>
-                        <td>
-                          <button type="button" className="btn btn-primary">
-                            Edit Specialist
-                          </button>
-                        </td>
-                        <td>
-                          <button
-                            type="button"
-                            className="btn btn-danger"
-                            onClick={() => {
-                              deleteSpec(user.username);
-                            }}
-                          >
-                            Delete Specialist
-                          </button>
-                        </td>
+                        <button
+                          type="button"
+                          className="btn btn-danger"
+                          onClick={() => {
+                            deleteSpec(user.username);
+                          }}
+                        >
+                          Delete Specialist
+                        </button>
                       </td>
                     </tr>
                   ))}
@@ -114,7 +108,7 @@ class ManageSpec extends React.Component {
                     aria-expanded="false"
                     aria-controls="collapseTwo"
                   >
-                    Add Specialist
+                    ADD SPECIALIST
                   </button>
                 </h2>
                 <div
@@ -124,11 +118,34 @@ class ManageSpec extends React.Component {
                   data-bs-parent="#accordionExample"
                 >
                   <div class="accordion-body">
-                      <SpecialistJoin />
+                    <SpecialistJoin />
                   </div>
                 </div>
               </div>
-              
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    EDIT SPECIALIST
+                  </button>
+                </h2>
+                <div
+                  id="collapseThree"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingThree"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <SpecialistEdit />
+                  </div>
+                </div>
+              </div>
             </div>
           </Col>
         </Row>

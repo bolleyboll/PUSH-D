@@ -45,8 +45,9 @@ export default function Join() {
   };
   const [err, setErr] = useState("");
   const postDataToServer = (data) => {
-    axios.post(`${base_url}/patient/register`, data).then(
+    axios.post(`${base_url}/doctor/register`, data).then(
       (response) => {
+        
         console.log(response.data);
         if(response.data==="USER ALREADY EXISTS"){
           console.log("Error!!!!!");
@@ -58,7 +59,8 @@ export default function Join() {
         setAlert(null);
         setAlert2(null);
         showAlert1("Successfully Registered you can now login!", "Success");
-      }},
+      }
+      window.location.reload(false);},
       (error) => {
         console.log(error);
         console.log("error!");
@@ -70,7 +72,7 @@ export default function Join() {
   };
   return (
     <>
-      <div style={{ marginLeft: "20%", marginRight: "20%" }}>
+      <div style={{ marginLeft: "5%", marginRight: "5%" }}>
         <form
           onSubmit={handleForm}
           className="rounded my-4 mx-5 pt-2 shadow"
@@ -82,7 +84,7 @@ export default function Join() {
               htmlFor="exampleInputEmail1"
               className="form-label mx-2 my-3 fw-bold"
             >
-              Enter a Username
+              Enter Doctor's Username
             </label>
             <input
               onChange={(e) => {
@@ -137,7 +139,7 @@ export default function Join() {
               htmlFor="exampleInputEmail1"
               className="form-label mx-2 my-3 fw-bold"
             >
-              Enter your name
+              Enter Doctor's name
             </label>
             <input
               onChange={(e) => {
@@ -156,7 +158,7 @@ export default function Join() {
               htmlFor="exampleInputEmail1"
               className="form-label mx-2 my-3 fw-bold"
             >
-              Enter you Email Address
+              Enter Doctor's Email Address
             </label>
             <input
               type="email"
@@ -175,7 +177,6 @@ export default function Join() {
               required
             />
           </div>
-
           <button
             type="submit"
             className="btn btn-primary btn-lg mx-5 my-3 shadow"

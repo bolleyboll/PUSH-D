@@ -73,7 +73,7 @@ function App() {
             <AdminNavbar />
             <ManageSpec />
           </Route>
-          <Route path="/manageDoc">
+          <Route path="/manageDoctor">
             <AdminNavbar />
             <ManageDoctor />
           </Route>

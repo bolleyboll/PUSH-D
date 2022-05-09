@@ -6,8 +6,9 @@ class Pie_chart extends React.Component {
     super(props);
 
     this.state = {
-      series: [1,4],
-      options: {
+      series: [props.name,4-(props.name-1)],
+      options: { colors:['#90EE90','#F44336'],
+      labels:['Completed','Yet to complete'],
         chart: {
           type: "donut",
         },

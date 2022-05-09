@@ -2,6 +2,7 @@ import React, { Fragment, useEffect, useState } from "react";
 import { Container, Form, FormGroup, Input, Button } from "reactstrap";
 import axios from "axios";
 import base_url from "../api/bootapi";
+import Pie_chart from "./Pie_chart";
 import { toast, ToastContainer } from "react-toastify";
 import "./Section_style.css";
 import { Link } from "react-router-dom";
@@ -284,6 +285,7 @@ const Section2 = () => {
               <Button type="reset" color="warning ms-2" className="btn-lg">
                 Clear
               </Button>
+              <Pie_chart name={1}/>
             </Container>
           </Form>
         </Fragment>

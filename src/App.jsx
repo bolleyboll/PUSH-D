@@ -25,6 +25,7 @@ import PatientSections from "./Components/PatientSections";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import cookies from 'js-cookie'
+import TryCode from "./Components/TryCode";
 
 const languages = [
   {

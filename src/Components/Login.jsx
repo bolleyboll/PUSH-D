@@ -34,7 +34,7 @@ export default function Login() {
           {
             window.open("/docDash", "_self");
           }
-        } else if (data.role === "spec") {
+        } else if (data.role === "specialist") {
           {
             window.open("/spDash", "_self");
           }
@@ -115,7 +115,7 @@ export default function Login() {
               Patient
             </option>
             <option value="doctor">Doctor</option>
-            <option value="spec">Specialist</option>
+            <option value="specialist">Specialist</option>
             <option value="admin">Admin</option>
           </select>
         </div>

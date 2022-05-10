@@ -38,20 +38,37 @@ const Section5 = () => {
 
   // Creating function to post data on the server
   const postDatatoServer = (data) => {
-    axios.post(`${base_url}/courses`, data).then(
-      (response) => {
-        console.log(response);
-        console.log("success");
-        // toast.success("Data has been added");
-      },
-      (error) => {
-        console.log(error);
-        console.log("error");
-        // toast.success("Something went wrong");
-      }
-    );
+    const str1 = data.q1;
+      const str2 = str1.concat(
+        ",",
+        data.q2,
+        ",",
+        data.q3,
+        ",",
+        data.q4
+        );
+        console.log(str2)
+      axios
+      .post(`${base_url}/section/save`, {
+        entryId:Math.floor(Math.random()*100),
+        username: sessionStorage.getItem("username"),
+        sectionId: "section5",
+        responseTime: "",
+        response: str2
+      })
+      .then(
+        (response) => {
+          console.log(response);
+          console.log("success");
+            // toast.success("Data has been added");
+        },
+        (error) => {
+          console.log(error);
+          console.log("error");
+          // toast.success("Something went wrong");
+        }
+      );
   };
-
   return (
     <Container>
           <div className="app_section mb-5">
@@ -319,17 +336,25 @@ const Section5 = () => {
                   </FormGroup>
 
                   <Container className="text-center">
-                    <Link to={sessionStorage.getItem("nextOfSec5")}>
-                      <Button
-                        type="submit"
-                        onClick={disable}
-                        color="success"
-                        className="btn-lg"
-                      >
-                        Submit
-                      </Button>
-                    </Link>
-                    <Button
+                  <Link to={sessionStorage.getItem("nextOfSec5")}>
+                <Button
+                    type="button"
+                    color="success"
+                    onClick={disable}
+                    className="btn-lg"
+                  >
+                    Next Section
+                  </Button>
+                </Link>
+                <Button
+                    type="button"
+                    color="success"
+                    onClick={handleForm}
+                    className="btn-lg"
+                  >
+                    Submit
+                  </Button>
+                                    <Button
                       type="reset"
                       color="warning ms-2"
                       className="btn-lg"

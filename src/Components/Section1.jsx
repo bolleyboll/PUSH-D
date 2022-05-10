@@ -52,8 +52,6 @@ const Section1 = () => {
 
   return (
     <Container>
-      <Row>
-        <Col md={8}>
           <div className="app_section mb-5">
             <div style={{ marginLeft: "5%", marginRight: "5%" }}>
               <Fragment>
@@ -340,11 +338,6 @@ const Section1 = () => {
               </Fragment>
             </div>
           </div>
-        </Col>
-        <Col md={4}>
-          <Pie_chart name={0} />
-        </Col>
-      </Row>
     </Container>
   );
 };

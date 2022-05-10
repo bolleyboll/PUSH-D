@@ -4,15 +4,27 @@ import axios from "axios";
 import base_url from "../api/bootapi";
 import Alert from "./Alert";
 import { Link } from "react-router-dom";
+import LinkSent from "./LinkSent";
+import { toast,ToastContainer } from "react-toastify";
 
 export default function ForgetPassword1() {
-
+  const [alert, setAlert] = useState(null);
+  const showAlert = (message, type) => {
+    setAlert({
+      msg: message,
+      type: type,
+    });
+  };
+  
   const getOtp=(emailId)=>{
+    sessionStorage.setItem("eId",emailId)
     axios.get(`${base_url}/signin/resetpassword?userEmail=${emailId}`).then(
         (response)=>{
             console.log(response.data);
             console.log("success!")
-        },
+            showAlert("Password and Confirm Password donot match !", "Success");
+            // toast.success("Reset link sent !")
+          },
         (error)=>
         {   
             console.log(error);
@@ -23,6 +35,7 @@ export default function ForgetPassword1() {
 
   return (
     <>
+    
       <img
         className="rounded float-start"
         src="home_active_minds.png"
@@ -57,7 +70,7 @@ export default function ForgetPassword1() {
           Submit
         </button>
         {/* <div style={{color:'red'}} className="text-center">{err}</div> */}
-        {/* <Alert alert={alert} /> */}
+       <LinkSent alert={alert} />
       </form>
     </>
   );

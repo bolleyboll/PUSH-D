@@ -24,6 +24,9 @@ const Section1 = () => {
   useEffect(() => {
     document.title = "Active Minds";
   }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   const [course, setCourse] = useState({});
 

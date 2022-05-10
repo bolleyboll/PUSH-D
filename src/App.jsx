@@ -28,6 +28,7 @@ import ManageDoctor from "./Components/ManageDoctor";
 import ManagePat from "./Components/ManagePat";
 import ForgetPassword1 from "./Components/ForgetPassword1";
 import PatientChat from "./Components/PatientChat";
+import EnterFpd from "./Components/EnterFpd";
 
 const languages = [
   {
@@ -75,6 +76,10 @@ window.onpopstate = function () {
           <Route path="/forgetPassword">
             <Navbar />
             <ForgetPassword1 />
+          </Route>
+          <Route path="/enterfpd">
+            <Navbar />
+            <EnterFpd/>
           </Route>
           <Route path="/manageSpec">
             <AdminNavbar />

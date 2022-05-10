@@ -21,18 +21,13 @@ import Section3 from "./Components/Section3";
 import Section4 from "./Components/Section4";
 import Section5 from "./Components/Section5";
 import PatientDetails from "./Components/PatientDetails";
-import PatientSections from "./Components/PatientSections";
 import React from "react";
 import { useTranslation } from "react-i18next";
-import cookies from 'js-cookie'
-import TryCode from "./Components/TryCode";
 import ManageSpec from "./Components/ManageSpec";
 import ManageDoctor from "./Components/ManageDoctor";
 import ManagePat from "./Components/ManagePat";
-import DoctorEdit from "./Components/DoctorEdit";
 import ForgetPassword1 from "./Components/ForgetPassword1";
 import PatientChat from "./Components/PatientChat";
-import ForgetPassword from "./Components/ForgetPassword";
 
 const languages = [
   {

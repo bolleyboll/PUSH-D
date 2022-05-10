@@ -7,55 +7,20 @@ import { Link } from "react-router-dom";
 
 export default function ForgetPassword1() {
 
-  const getOtp=(email)=>{
-    axios.get(`${base_url}/signin/resetpassword?userEmail=${email}`).then( //this is a promise for what to do if depend on response and on error
+  const getOtp=(emailId)=>{
+    axios.get(`${base_url}/signin/resetpassword?userEmail=${emailId}`).then(
         (response)=>{
-            //success
-           // console.log(response);
             console.log(response.data);
             console.log("success!")
-            // toast.success("Courses has been laoded")
-            // setCourses(response.data);
         },
         (error)=>
-        {   //for errror
+        {   
             console.log(error);
-            // toast.error("Something Went wrong")
+            console.log("Error!")
         }
     );
 } ;
 
-
-//   const postDataToServer = (data) => {
-//     sessionStorage.setItem("username",data.username)
-//     axios.post(`${base_url}/${data.role}/signin`, data).then(
-//       (response) => {
-//         sessionStorage.setItem("userName", response.data);
-//         if (response.data === "Username or Password don't match!") {
-//           showAlert("Invalid Id/Password", "Success");
-//         } else if (data.role === "patient") {
-//           {
-//             window.open("/patDash", "_self");
-//           }
-//         } else if (data.role === "doctor") {
-//           {
-//             window.open("/docDash", "_self");
-//           }
-//         } else if (data.role === "specialist") {
-//           {
-//             window.open("/spDash", "_self");
-//           }
-//         } else if (data.role === "admin") {
-//           {
-//             window.open("/adminDash", "_self");
-//           }
-//         }
-//       },
-//       (error) => {
-//         console.log(error);
-//       }
-//     );
-//   };
   return (
     <>
       <img

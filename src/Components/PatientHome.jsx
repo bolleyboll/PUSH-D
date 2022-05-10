@@ -9,26 +9,27 @@ export default function PatientHome() {
     <>
       <PatientDetails />
       <PatientSections />
+      {/* <div className="jumbotron jum">
+        <h1 className="display-4">Welcome to Active Minds!</h1>
+        <p className="lead"> Its Nice to Meet You</p>
+      </div> */}
       <div
         id="pat-cont-div"
-        class="container"
-        style={{ position: "absolute", top: "30%", left: "45%" }}
+        className="container"
       >
-        <div className="fs-1 text-center">Welcome To Active Minds!</div>
-        <div className="fs-5 text-center">It's Nice To Meet You</div>
+        
+      <div class="jumbotron shadow">
+        <h1 class="display-4">Welcome To Active Minds!</h1>
         <br />
-        <br />
-        {/* <Link
-          className="btn btn-primary btn-xl text-uppercase"
-          style={{ position: "absolute", left: "35%" }}
-          to={sessionStorage.getItem("sec1")}
-          onClick={() =>
-            (document.getElementById("pat-cont-div").hidden = true)
-          }
-        >
-          Start Sections
-        </Link> */}
+        <p class="lead">
+        It's Nice To Meet You
+        </p>
+        <br/>
+        <p className="fs-4">
+        Click on the first section to get started
+        </p>
       </div>
+      </div> 
     </>
   );
 }

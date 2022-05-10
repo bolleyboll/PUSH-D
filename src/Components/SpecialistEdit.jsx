@@ -57,7 +57,7 @@ export default function Join() {
         console.log("success!");
         setAlert(null);
         setAlert2(null);
-        showAlert1("Successfully Registered you can now login!", "Success");
+        showAlert1("Successfully Edited you can now login!", "Success");
       }},
       (error) => {
         console.log(error);
@@ -67,6 +67,7 @@ export default function Join() {
         showAlert2("Error !", "Success");
       }
     );
+    window.location.reload(false);
   };
   return (
     <>

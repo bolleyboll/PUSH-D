@@ -58,7 +58,7 @@ class PatientChat extends React.Component {
                   </tbody>
                 </table>
         
-        <form className="shadow text-center my-5" style={{width:"30%",marginLeft:"60%",marginRight:"10%"}}>
+        <form id="chat-pat-form" className="shadow text-center my-5" style={{width:"30%",marginLeft:"60%",marginRight:"10%"}}>
         <div className="mx-5">
             <label
               htmlFor="exampleInputPassword1"
@@ -92,7 +92,8 @@ class PatientChat extends React.Component {
             />
           </div>
           
-          <button type="button" className="btn btn-primary my-3" onClick={()=>{sendMessage(sessionStorage.getItem("username"))}}>
+          <button type="button" className="btn btn-primary my-3" onClick={()=>{sendMessage(sessionStorage.getItem("username"));
+        document.getElementById("chat-pat-form").reset()}}>
             Submit
           </button>
         </form>

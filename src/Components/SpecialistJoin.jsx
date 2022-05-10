@@ -67,6 +67,7 @@ export default function Join() {
         showAlert2("Error !", "Success");
       }
     );
+    window.location.reload(false);
   };
   return (
     <>
